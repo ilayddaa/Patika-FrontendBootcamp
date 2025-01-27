@@ -5,10 +5,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim</title>
+    <style>
+        body {
+            background-color: rgb(41, 18, 26);
+            color: rgb(117, 106, 124);
+        }
+    </style>
 </head>
 
 <body>
-
+    <div style="display: flex; align-items: center;"> <!-- flex ile yan yana geldiler, align ile ortaladı(y)-->
+        <h2><i>İletişim</i></h2>
+        <ul style="display: flex;">
+            <li style="margin-right: 20px;"><a href="hakkinda.html"
+                    style="color: rgb(224, 204, 204);"><i>Hakkında</i></a>
+            </li>
+            <li style="margin-right: 20px;"><a href="index.html" style="color: rgb(211, 196, 196);"><i>Ana Sayfa</i></a>
+            </li>
+            <li><a href="servisler.html" style="color: rgb(218, 205, 205);"><i>Servisler</i></a></li>
+        </ul>
+    </div>
+    <fieldset style="border-radius: 20%;">
+        <legend>
+            <h3>İletişim</h3>
+        </legend>
+        <P><strong>Adres:</strong> Riot Mahallesi, Warwick Caddesi, Lobi sokağı NO:58 Daire:300 Warwick/RIOT</P>
+        <a href="+905585885858" style="color: rgb(117, 106, 124);">Telefon Numarası</a> <br>
+        <a href="warwick" style="color: rgb(117, 106, 124);"">Instagram</a> <br>
+<br>
+</fieldset>
+<fieldset style=" border-radius:20%;">
+            <legend>
+                <h3>İletişime GEÇ!</h3>
+            </legend>
+            <form>
+                <div>
+                    <label for="fullname">İsim Soyisim:</label>
+                    <input type="text" id="fullname" placeholder="Warwick Orhanoğulları">
+                </div>
+                <br>
+                <div>
+                    <label for="mail">Mail:</label>
+                    <input type="email" id="mail" placeholder="warwick@gmail.com">
+                </div>
+                <br>
+                <div>
+                    <label for="message">Mesajınız:</label>
+                    <textarea id="message" placeholder="Buraya yaz."></textarea>
+                </div>
+                <br>
+                <button style="color: rgb(4, 4, 4); margin-left: 30%;" type="submit">
+                    Gönder!
+                </button>
+            </form>
+    </fieldset>
 </body>
 
 </html>
