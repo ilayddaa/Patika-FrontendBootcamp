@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Form Page 💬​</h1>
+    <form>
+        <fieldset>
+            <legend>ℹ️​ Personal Information:</legend>
+            <div>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="write your name">
+            </div>
+            <br>
+            <div>
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" placeholder="write your surname">
+            </div>
+            <br>
+            <div>
+                <label for="gender">Gender:</label>
+                <input type="radio" name="gender" value="female"> Female 👩​
+                <input type="radio" name="gender" value="male"> Male 👨​
+            </div>
+            <br>
+            <div>
+                <label for="birthday">Birth Date</label>
+                <input type="date" id="birthday">
+            </div>
+            <br>
+            <div>
+                <label for="city">City:</label>
+                <select id="city">
+                    <option value="">Choose...</option>
+                    <optgroup label="Marmara">
+                        <option value="İstanbul">İstanbul</option>
+                        <option value="Edirne">Edirne</option>
+                    </optgroup>
+                    <optgroup label="Ege"></optgroup>
+                    <option value="İzmir">İzmir</option>
+                    <option value="Muğla">Muğla</option>
+                    </optgroup>
+                    <optgroup label="America"></optgroup>
+                    <option value="İstanbul">New York</option>
+                    <option value="Edirne">Los Angeles</option>
+                    </optgroup>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>📝​ Contact:</legend>
+            <div>
+                <label for="email">E-Mail:</label>
+                <input type="email" id="email" placeholder="write e-mail 📩​">
+            </div>
+            <br>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="write phone number ​📱​">
+            </div>
+            <br>
+            <div>
+                <label for="address">Address:</label>
+                <textarea id="address" placeholder="write address 🏠​"></textarea>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>​🎫​ Login Information</legend>
+            <div>
+                <label for="username">UserName:</label>
+                <input type="text" id="username" placeholder="write username">
+            </div>
+            <br>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" placeholder="i dont see your passwd">
+            </div>
+        </fieldset>
+        <br>
+        <button type="submit">Sign Up ✔️​</button>
+        <button type="reset">Clear ❗​</button>
+    </form>
+</body>
+
+</html>
