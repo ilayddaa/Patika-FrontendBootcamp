@@ -17,7 +17,7 @@ body {
 }
 
 .nav-link {
-    text-align:right;
+    text-align: right;
     font-family: Arial, Helvetica, sans-serif;
     color: #f4f4f4;
 }
@@ -30,14 +30,16 @@ body {
 }
 
 .nav-container {
-    display:flex; /* menüyü yatay yapar */
-    flex-direction: column; /* menüyü dikey yapar, blog sitesi yazısı ve blogs alt alta gelmesi için */
+    display: flex;
+    /* menüyü yatay yapar */
+    flex-direction: column;
+    /* menüyü dikey yapar, blog sitesi yazısı ve blogs alt alta gelmesi için */
     align-items: center;
 }
 
 .nav ul {
     list-style: none;
-        /* stili kaldırır blogs'un yanındaki nokta işareti. */
+    /* stili kaldırır blogs'un yanındaki nokta işareti. */
     padding: 0;
     margin: 0;
 }
@@ -47,7 +49,8 @@ body {
     color: #f4f4f4;
     text-align: center;
     padding: 20px 0;
-    position:fixed; /* poziyonu sabitler */
+    position: fixed;
+    /* poziyonu sabitler */
     width: 100%;
     bottom: 0;
 }
@@ -58,9 +61,12 @@ body {
     padding: 30px 30px;
     margin: 30px;
     border-radius: 10px;
-    align-items: center; /* yazıları ortalar yatayda */
-    display: flex; /* yazıları yatay yapar */
-    flex-direction: column; /* yazıları dikey yapar */
+    align-items: center;
+    /* yazıları ortalar yatayda */
+    display: flex;
+    /* yazıları yatay yapar */
+    flex-direction: column;
+    /* yazıları dikey yapar */
     /*  justify-content: center; yazıları ortalar dikeyde */
     min-width: 300px;
     min-height: 200px;
@@ -85,19 +91,19 @@ body {
 
 .article-post {
     background-color: #ffffff;
-        color: #333;
-        padding: 30px 30px;
-        margin: 30px;
-        border-radius: 10px;
-        align-items: center;
-        /* yazıları ortalar yatayda */
-        display: flex;
-        /* yazıları yatay yapar */
-        flex-direction: column;
-        /* yazıları dikey yapar */
-        /*  justify-content: center; yazıları ortalar dikeyde */
-        min-width: 300px;
-        min-height: 200px;
-        width: 60%;
-        height: 450px;
+    color: #333;
+    padding: 30px 30px;
+    margin: 30px;
+    border-radius: 10px;
+    align-items: center;
+    /* yazıları ortalar yatayda */
+    display: flex;
+    /* yazıları yatay yapar */
+    flex-direction: column;
+    /* yazıları dikey yapar */
+    /*  justify-content: center; yazıları ortalar dikeyde */
+    min-width: 300px;
+    min-height: 200px;
+    width: 60%;
+    height: 450px;
 }
