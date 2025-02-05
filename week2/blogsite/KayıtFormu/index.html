@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıt Formu</title>
+    <style>
+        body {
+            background-color: rgb(150, 135, 164);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            padding: center;
+        }
+
+        * {
+            margin: 3px;
+            padding: 4px;
+            box-sizing: border-box;
+            text-align: center;
+            color: rgb(56, 39, 54);
+            border-radius: 100px;
+        }
+
+        input {
+            color: rgb(50, 46, 50);
+            background-color: rgb(215, 185, 221);
+        }
+    </style>
+</head>
+
+<body>
+    <fieldset style="background-color: rgb(93, 78, 108); width: 300px;">
+        <legend style="background-color: rgb(93, 78, 108); color: rgb(56, 39, 54); font-style: italic;">Registration
+            Form</legend>
+        <form action="kayit" method="post">
+            <input type="text" name="fullname" id="fullname" required placeholder=" ✎ Full Name"
+                style="border-radius: 100px; width: 150px; height: 30px;"> <br> <br>
+            <input type="email" name="email" id="email" required placeholder=" ✎ E-Mail"
+                style="border-radius: 100px; width: 150px; height: 30px;"> <br> <br>
+            <input type="number" name="number" id="number" required placeholder="✎ Age"
+                style="border-radius: 100px; width: 150px; height: 30px;">
+            <br> <br>
+            <h2>Select Gender</h2>
+            <hr style="padding: 0px;">
+            <div>
+                <label>Where did u here us?</label> <br> <br>
+                <input type="radio" name="here" value="Twitter"> Twitter <br>
+                <input type="radio" name="here" value="Instagram"> Instagram <br>
+            </div>
+            <br>
+            <div>
+                <input type="checkbox" name="option" value="Term"> Terms Of Service <br>
+                <input type="checkbox" name="option" value="Subscribe"> Subscribe For News <br>
+            </div>
+            <br>
+            <div>
+                <textarea name="suggestion" id="suggestion" placeholder="╰┈➤Suggestions..."
+                    style="background-color: rgb(215, 185, 221);"></textarea>
+            </div>
+            <br>
+            <input type="submit" value="Sign Up" style="border-radius: 100px; width: 100px; height: 30px;">
+        </form>
+    </fieldset>
+</body>
+
+</html>
