@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagopa Kajmer - Books</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-image: url("https://e0.pxfuel.com/wallpapers/633/791/desktop-wallpaper-2048x1152-background-black-2048-x-1152.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        color: #4a4a55;
+        font-family: 'Courier New', Courier, monospace;
+        padding-top: 20px;
+    }
+
+    .header {
+        text-align: center;
+        line-height: 1.5;
+        font-size: 2.5rem;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 500;
+        padding: 20px 0;
+        color: #413f3d;
+        background: none;
+    }
+
+    .nav {
+        top: 50px;
+        color: #424141;
+        background: none;
+        right: 150px;
+        z-index: 1000;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        background: none;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        margin-right: 20px;
+        padding: 10px;
+        background: none;
+    }
+
+    .nav ul li {
+        margin: 0 20px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #adadae;
+        transition: color 0.3s ease;
+    }
+
+    a:hover {
+        color: #c00b0b;
+    }
+
+    pre {
+        font-size: 1.5rem;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: #999591;
+        line-height: 1.5;
+        margin: 0;
+        background: none;
+        display: block;
+        max-width: 100%;
+        overflow-x: auto;
+        padding: 10px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: none;
+    }
+
+    .profile-image {
+        border-radius: 50%;
+        background: none;
+        margin: 100px;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+    }
+
+    fieldset {
+        border: 1px solid #fff;
+        margin-right: 200px;
+        padding: 20px;
+        background: none;
+        max-width: 500px;
+        font-weight: 200;
+        font-style: italic;
+    }
+
+    legend {
+        color: #999591;
+        padding: 0 10px;
+        background: none;
+    }
+</style>
+
+<body>
+    <h1 class="header">Sagopa Kajmer</h1>
+    <nav class="nav">
+        <div class="nav-container">
+            <ul>
+                <li><a href="./home.html" class="nav-link">Hakkında</a></li>
+                <li><a href="./info.html" class="nav-link">Eserler</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <img src="https://images.genius.com/ed15c165e10610b0b3064b762ac2e652.820x820x1.jpg" alt="Sagopa Kajmer portrait"
+            class="profile-image">
+
+        <div class="article">
+            <fieldset>
+                <legend>Atasözü</legend>
+                <pre>Vakit varken tomurcukları topla,
+zaman hala uçup gidiyor
+ve bugün gülümseyen bu çiçek,
+yarın ölüyor olabilir.</pre>
+            </fieldset>
+            <div class="article">
+                <fieldset>
+                    <legend>Atasözü</legend>
+                    <pre>
+Her nefesi soluduğumda hep yektim,
+bu ücralarda ben benimi kaybettim,
+ve düşman kelimesinin anlamını 
+arkadaş sıfatınıtaşıyanlardan öğrendim.
+                    </pre>
+                </fieldset>
+            </div>
+            <div class="article">
+                <fieldset>
+                    <legend>Atasözü</legend>
+                    <pre>Sözler bazen bir hazine,
+bazen dermansız bir dert tipi. 
+Geçmiş dünden bahsetmek lezzetsiz; 
+gelmemiş yarından hep mi
+şikayetçiyiz biz?.</pre>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
