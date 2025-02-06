@@ -1,0 +1,530 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noam Chomsky | The Intellectual Journey</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --sage-primary: #708b75;
+            --sage-light: #d3ded6;
+            --sage-dark: #465d4c;
+            --gray-light: #e5e7e6;
+            --gray-dark: #424242;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f8faf9;
+            color: var(--gray-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1.5rem 2rem;
+            z-index: 1000;
+            background: rgba(248, 250, 249, 0.95);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .nav-links a {
+            color: var(--gray-dark);
+            text-decoration: none;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--sage-primary);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .hero {
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: grayscale(20%);
+            transform: scale(1.1);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4rem;
+            background: var(--sage-light);
+            position: relative;
+        }
+
+        .hero-content::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+            opacity: 0.5;
+        }
+
+        .quote {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.5rem;
+            line-height: 1.4;
+            color: var(--sage-dark);
+            margin-bottom: 2rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards 0.5s;
+            position: relative;
+        }
+
+        .quote-source {
+            font-style: italic;
+            color: var(--sage-primary);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards 0.8s;
+        }
+
+        .info-section {
+            padding: 8rem 4rem;
+            background: linear-gradient(to bottom, #fff, var(--sage-light));
+            position: relative;
+        }
+
+        .info-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            color: var(--sage-dark);
+            margin-bottom: 3rem;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 2rem 0 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background: var(--sage-primary);
+        }
+
+        .timeline-item {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+            animation-delay: calc(var(--delay) * 200ms);
+        }
+
+        .timeline-year {
+            text-align: right;
+            padding-right: 3rem;
+            font-size: 1.2rem;
+            color: var(--sage-primary);
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--sage-light);
+        }
+
+        .timeline-content h3 {
+            font-family: 'Cormorant Garamond', serif;
+            color: var(--sage-dark);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .books-section {
+            padding: 8rem 4rem;
+            background: linear-gradient(45deg, var(--sage-light), #fff);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .book-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 4px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            border: 1px solid var(--sage-light);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s forwards;
+            animation-delay: calc(var(--delay) * 200ms);
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-year {
+            font-size: 0.9rem;
+            color: var(--sage-primary);
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        .book-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--sage-dark);
+            margin-bottom: 1rem;
+        }
+
+        .book-desc {
+            color: var(--gray-dark);
+            font-size: 0.95rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .book-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .book-tag {
+            font-size: 0.8rem;
+            color: var(--sage-primary);
+            padding: 0.2rem 0.8rem;
+            background: var(--sage-light);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .book-card:hover .book-tag {
+            background: var(--sage-primary);
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                height: 50vh;
+            }
+
+            .hero-content {
+                padding: 2rem;
+            }
+
+            .quote {
+                font-size: 2rem;
+            }
+
+            .timeline::before {
+                left: 2rem;
+            }
+
+            .timeline-item {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .timeline-year {
+                text-align: left;
+                padding-left: 4rem;
+            }
+
+            .info-section,
+            .books-section {
+                padding: 4rem 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#info">Info</a>
+                <a href="#books">Books</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-image">
+            <img src="https://www.ithakiyayingrubu.com/dosyalar/2022/02/Noam-Chomsky.jpg" alt="Noam Chomsky">
+        </div>
+        <div class="hero-content">
+            <blockquote class="quote">
+                "If we don't believe in freedom of expression for people we despise, we don't believe in it at all."
+            </blockquote>
+            <cite class="quote-source">- Noam Chomsky</cite>
+        </div>
+    </section>
+
+    <section class="info-section" id="info">
+        <div class="info-container">
+            <h2 class="section-title">Life & Legacy</h2>
+
+            <div class="timeline">
+                <div class="timeline-item" style="--delay: 1">
+                    <div class="timeline-year">1928</div>
+                    <div class="timeline-content">
+                        <h3>Early Life</h3>
+                        <p>Born in Philadelphia to Jewish parents. His father William Chomsky was a noted Hebrew scholar
+                            who influenced his early linguistic interests.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="--delay: 2">
+                    <div class="timeline-year">1945-1955</div>
+                    <div class="timeline-content">
+                        <h3>Academic Formation</h3>
+                        <p>Studied at the University of Pennsylvania, where he developed his early theories in
+                            linguistics under Zellig Harris. Completed his Ph.D. dissertation on transformational
+                            analysis.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="--delay: 3">
+                    <div class="timeline-year">1955-1965</div>
+                    <div class="timeline-content">
+                        <h3>Revolutionary Theories</h3>
+                        <p>Joined MIT and published "Syntactic Structures," revolutionizing the field of linguistics
+                            with his theory of transformational generative grammar.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="--delay: 4">
+                    <div class="timeline-year">1965-1975</div>
+                    <div class="timeline-content">
+                        <h3>Political Activism</h3>
+                        <p>Emerged as a prominent critic of U.S. foreign policy, particularly regarding the Vietnam War.
+                            Published influential works combining linguistics and political analysis.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="--delay: 5">
+                    <div class="timeline-year">1975-2000</div>
+                    <div class="timeline-content">
+                        <h3>Expanding Influence</h3>
+                        <p>Continued developing linguistic theories while becoming one of the world's leading public
+                            intellectuals and critics of U.S. foreign policy and media.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item" style="--delay: 6">
+                    <div class="timeline-year">2000-Present</div>
+                    <div class="timeline-content">
+                        <h3>Contemporary Impact</h3>
+                        <p>Remains active in political discourse and academic work, publishing on linguistics, politics,
+                            and media criticism while continuing to influence public debate.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="books-section" id="books">
+        <!-- Books Section -->
+        <section class="books-section" id="books">
+            <div class="books-container">
+                <h2 class="section-title">Notable Works</h2>
+                <div class="books-grid">
+                    <div class="book-card" style="--delay: 1">
+                        <div class="book-year">1957</div>
+                        <h3 class="book-title">Syntactic Structures</h3>
+                        <p class="book-desc">A groundbreaking work that revolutionized linguistics with transformational
+                            generative grammar theory.</p>
+                        <div class="book-tags">
+                            <span class="book-tag">Linguistics</span>
+                            <span class="book-tag">Grammar Theory</span>
+                        </div>
+                    </div>
+
+                    <div class="book-card" style="--delay: 2">
+                        <div class="book-year">1965</div>
+                        <h3 class="book-title">Aspects of the Theory of Syntax</h3>
+                        <p class="book-desc">Expanded on his earlier work, introducing the distinction between deep and
+                            surface structure in linguistic theory.</p>
+                        <div class="book-tags">
+                            <span class="book-tag">Linguistics</span>
+                            <span class="book-tag">Syntax</span>
+                        </div>
+                    </div>
+
+                    <div class="book-card" style="--delay: 3">
+                        <div class="book-year">1988</div>
+                        <h3 class="book-title">Manufacturing Consent</h3>
+                        <p class="book-desc">Critical analysis of mass media's role in shaping public opinion and
+                            serving power structures.</p>
+                        <div class="book-tags">
+                            <span class="book-tag">Politics</span>
+                            <span class="book-tag">Media</span>
+                        </div>
+                    </div>
+
+                    <div class="book-card" style="--delay: 4">
+                        <div class="book-year">1995</div>
+                        <h3 class="book-title">The Minimalist Program</h3>
+                        <p class="book-desc">Advanced theoretical framework exploring computational efficiency in
+                            linguistic structure and universal grammar.</p>
+                        <div class="book-tags">
+                            <span class="book-tag">Linguistics</span>
+                            <span class="book-tag">Theory</span>
+                        </div>
+                    </div>
+
+                    <div class="book-card" style="--delay: 5">
+                        <div class="book-year">2002</div>
+                        <h3 class="book-title">Understanding Power</h3>
+                        <p class="book-desc">Collection of discussions examining the nature of power, democracy, and
+                            social institutions in modern society.</p>
+                        <div class="book-tags">
+                            <span class="book-tag">Politics</span>
+                            <span class="book-tag">Social Theory</span>
+                        </div>
+                    </div>
+
+                    <div class="book-card" style="--delay: 6">
+                        <div class="book-year">2006</div>
+                        <h3 class="book-title">Failed States</h3>
+                        <p class="book-desc">Analysis of state power and international relations, examining how powerful
+                            nations can exhibit characteristics of 'failed states'.</p>
+                        <div class="book-tags">
+                            <span class="book-tag">Politics</span>
+                            <span class="book-tag">International Relations</span>
+                        </div>
+                    </div>
+
+                    <div class="book-card" style="--delay: 7">
+                        <div class="book-year">2011</div>
+                        <h3 class="book-title">How the World Works</h3>
+                        <p class="book-desc">Comprehensive overview of global politics, economics, and power structures
+                            through interviews and essays.</p>
+                        <div class="book-tags">
+                            <span class="book-tag">Politics</span>
+                            <span class="book-tag">Economics</span>
+                        </div>
+                    </div>
+
+                    <div class="book-card" style="--delay: 8">
+                        <div class="book-year">2017</div>
+                        <h3 class="book-title">Requiem for the American Dream</h3>
+                        <p class="book-desc">Analysis of wealth and power concentration in modern America, examining the
+                            principles of concentration of power.</p>
+                        <div class="book-tags">
+                            <span class="book-tag">Politics</span>
+                            <span class="book-tag">Economics</span>
+                        </div>
+                    </div>
+
+                    <div class="book-card" style="--delay: 9">
+                        <div class="book-year">2020</div>
+                        <h3 class="book-title">Climate Crisis and the Global Green New Deal</h3>
+                        <p class="book-desc">Discussion of environmental challenges and potential solutions through
+                            economic and social transformation.</p>
+                        <div class="book-tags">
+                            <span class="book-tag">Environment</span>
+                            <span class="book-tag">Economics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
