@@ -23,6 +23,15 @@
             text-align: center;
         }
 
+        @import url('https://fonts.cdnfonts.com/css/billabong');
+
+        .navbar-brand {
+            font-family: 'Billabong', sans-serif;
+            font-size: 30px;
+            position: relative;
+            left: 100px;
+        }
+
         .wrapper {
             display: flex;
         }
@@ -32,20 +41,89 @@
 <body>
     <nav class="navbar navbar-light bg-light">
         <a class="navbar-brand" style="position: relative; left: 100px;">Instagram</a>
+        <div class="nav-icons d-flex align-items-center" style="position: absolute; left: 70%;">
+            <a href="#" class="nav-link">
+                <i class="fas fa-home fa-lg" style="color: black;"></i>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="far fa-paper-plane fa-lg" style="color: black;"></i>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="far fa-compass fa-lg" style="color: black;"></i>
+            </a>
+            <a href="#" class="nav-link">
+                <i class="far fa-heart fa-lg" style="color: black;"></i>
+            </a>
+            <a href="#" class="nav-link">
+                <img src="https://media.licdn.com/dms/image/v2/D5603AQGIdOvchGjSwg/profile-displayphoto-shrink_800_800/B56ZPhdz_0HIAg-/0/1734654510058?e=1744243200&v=beta&t=okfpejYKViJ7ZXZ5VpO2D43umt9Rr9gYkWvIE44dvZ8"
+                    style="width: 30px; height: 30px; border-radius: 50%" alt="profile" />
+            </a>
+        </div>
         <form class="form-inline">
-            <input class="form-control mr-sm-2" type="search" placeholder="Ara" aria-label="Search"
-                style="left: 50%; text-align: center; height: 30px; position: absolute;">
+            <div class="input-group" style="position: absolute; left: 45%;">
+                <input class="form-control mr-sm-2" type="search" placeholder="Ara" aria-label="Search"
+                    style="text-align: center; height: 30px;">
+                <div class="input-group-append" style="position: absolute; left: 60px; top: 7px;">
+                    <i class="fas fa-search" style="color: #8e8e8e;"></i>
+                </div>
+            </div>
         </form>
     </nav>
     <div class="wrapper">
         <div class="col-sm-6 offset-sm-2 mt-4">
             <div class="row">
+                <div class="card mb-3" style="width: 600px; height: 120px;">
+                    <div class="card-header">
+                        <img src="https://biyoportre.com/wp-content/uploads/2024/10/Serenay-Sarikaya.jpg" class="mr-2"
+                            style="position: relative; border: 2px solid rgb(194, 8, 8); left: 25px; top: 5px; width: 60px; height: 60px; border-radius:50%"
+                            alt="profile" />
+                        <br>
+                        <span class="postuserfont"
+                            style="position: relative; font-size: x-small; bottom: 11px; left: 10px;"><strong>serenaysarıkaya</strong></span>
+                        <img src="https://www.usatoday.com/gcdn/authoring/authoring-images/2023/09/12/USAT/70836975007-elonmusk-9781982181284-hr.jpg?crop=1399,1400,x0,y641"
+                            class="mr-2"
+                            style="position: relative; border: 2px solid rgb(194, 8, 8); left: 25px; bottom: 56px; width: 60px; height: 60px; border-radius:50%"
+                            alt="profile" />
+                        <br>
+                        <span class="postuserfont"
+                            style="position: relative; font-size: x-small; left: 117px; bottom: 71px;"><strong>elonmusk</strong></span>
+                        <img src="https://www.geccemekan.com/files/uploads/1725356327-493cd08d236456d68b33.jpg"
+                            class="mr-2"
+                            style="position: relative; border: 2px solid rgb(194, 8, 8); left: 140px; bottom: 117px; width: 60px; height: 60px; border-radius:50%"
+                            alt="profile" />
+                        <br>
+                        <span class="postuserfont"
+                            style="position: relative; font-size: x-small; left: 205px; bottom: 132px;"><strong>emrefel</strong></span>
+                        <img src="https://images.genius.com/78bf9a1ad82c8af382461b26431a55a9.853x853x1.jpg" class="mr-2"
+                            style="position: relative; border: 2px solid rgb(194, 8, 8); left: 235px; bottom: 177px; width: 60px; height: 60px; border-radius:50%"
+                            alt="profile" />
+                        <br>
+                        <span class="postuserfont"
+                            style="position: relative; font-size: x-small; left: 295px; bottom: 192px;"><strong>ceza</strong></span>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3yE3g5WQXyTYQHzoTn8Keidr3sWrwZL6BmA&s"
+                            class="mr-2"
+                            style="position: relative; border: 2px solid rgb(194, 8, 8); left: 330px; bottom: 238px; width: 60px; height: 60px; border-radius:50%"
+                            alt="profile" />
+                        <br>
+                        <span class="postuserfont"
+                            style="position: relative; font-size: x-small; left: 360px; bottom: 252px;"><strong>tanerolmez</strong></span>
+                        <img src="https://www.sozmuzik.com/wp-content/uploads/2023/07/semicenk1-640x640.jpg"
+                            class="mr-2"
+                            style="position: relative; border: 2px solid rgb(194, 8, 8); left: 375px; bottom: 298px; width: 60px; height: 60px; border-radius:50%"
+                            alt="profile" />
+                        <br>
+                        <span class="postuserfont"
+                            style="position: relative; font-size: x-small; left: 444px; bottom: 297px;"><strong>semicenk</strong></span>
+
+
+                    </div>
+                </div>
                 <div class="card mb-3" style="width: 600px;">
                     <div class="card-header">
                         <img src="https://media.licdn.com/dms/image/v2/D5603AQGIdOvchGjSwg/profile-displayphoto-shrink_800_800/B56ZPhdz_0HIAg-/0/1734654510058?e=1744243200&v=beta&t=okfpejYKViJ7ZXZ5VpO2D43umt9Rr9gYkWvIE44dvZ8"
                             class="mr-2" style="width: 35px; height: 35px; border-radius:50%" alt="profile" />
                         <span class="postuserfont"><strong>lyddd0</strong></span>
-                        <span class="mt-2"><strong><i class="fas fa-ellipsis-h"></i></strong></span>
+                        <span class="mt-2"><strong><i class="fas fa-ellipsis-h ml-3"></i></strong></span>
                     </div>
                     <img src="https://store.patika.dev/certificates/2qlBlEiD" class="card-img-top" alt="Sertifika" />
                     <ul class="list-group list-group-horizontal mt-1" style="list-style-type: none; border: 0">
@@ -84,7 +162,8 @@
                     </span>
                     <div class="card-body" style="margin-top: -15px">
                         <p class="card-text postuserfont">
-                            <strong style="margin-left: -4px; margin-right: 5px">lyddd0</strong>Kodlamaya devam mı? 🚀
+                            <strong style="margin-left: -4px; margin-right: 5px">lyddd0</strong>Kodlamaya
+                            devam mı? 🚀
                         </p>
                         <a href="#" style="text-decoration: none">
                             <p class="card-text postuserfont" style="
@@ -96,11 +175,13 @@
                             </p>
                         </a>
                         <p class="card-text postuserfont">
-                            <strong style="margin-left: -4px; margin-right: 5px">sagopakajmer_resmi</strong>Helal olsun!
+                            <strong style="margin-left: -4px; margin-right: 5px">sagopakajmer_resmi</strong>Helal
+                            olsun!
                             🤯
                         </p>
                         <p class="card-text postuserfont" style="margin-top: -15px">
-                            <strong style="margin-left: -4px; margin-right: 5px">patika.dev</strong>Yarın gel işe başla!
+                            <strong style="margin-left: -4px; margin-right: 5px">patika.dev</strong>Yarın
+                            gel işe başla!
                             🤩
                         </p>
                         <p class="card-text" style="
@@ -119,7 +200,267 @@
                     'Helvetica Neue', sans-serif;
                     font-size: 14px;
                 ">
-                        <span style="margin-left: -4px">Yorum Ekle...</span><span class=""
+                        <span style="margin-left: -4px">Yorum Ekle...</span><span class="ml-4"
+                            style="color: #0095f6; opacity: 50%"><strong>Paylaş</strong></span>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 600px;">
+                    <div class="card-header">
+                        <img src="https://i.scdn.co/image/ab6761610000e5eb6eb76d24f4d5055fbf2642c3" class="mr-2"
+                            style="width: 35px; height: 35px; border-radius:50%" alt="profile" />
+                        <span class="postuserfont"><strong>sagopakajmer_resmi</strong></span>
+                        <span class="mt-2"><strong><i class="fas fa-ellipsis-h ml-3"></i></strong></span>
+                    </div>
+                    <img src="https://cdn.iticket.com.tr/event/poster_square/cksFy0ZKsrvbvCIA0zX2q6HaoKo0WPGVg1WCJDFQ.jpg"
+                        class="card-img-top" alt="Sagopa Kajmer Konser" />
+                    <ul class="list-group list-group-horizontal mt-1" style="list-style-type: none; border: 0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-heart fa-lg"
+                                    style="color: black; position: relative; font-size: 23px"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-comment fa-lg" style="
+                                        color: black;
+                                        position: relative;
+                                        font-size: 23px;
+                                        margin-left: -11px;
+                                        "></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-paper-plane fa-lg" style="
+                                        color: black;
+                                        position: relative;
+                                        font-size: 23px;
+                                        margin-left: -11px;
+                                        "></i></a>
+                        </li>
+                        <span>
+                            <li class="nav-item ml-4">
+                                <a class="nav-link ml-2" href="#"><i class="far fa-bookmark fa-lg"
+                                        style="color: black; position: relative; font-size:23px"></i></a>
+                            </li>
+                        </span>
+                    </ul>
+                    <span>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQGIdOvchGjSwg/profile-displayphoto-shrink_800_800/B56ZPhdz_0HIAg-/0/1734654510058?e=1744243200&v=beta&t=okfpejYKViJ7ZXZ5VpO2D43umt9Rr9gYkWvIE44dvZ8"
+                            class="mb-1 ml-3" style="width: 23px; height: 23px; border-radius: 50%" alt="like" />
+                        <span class="postuserfont"><strong>lyddd0</strong> ve
+                            <strong>3.123.123 diğer kişi</strong> beğendi</span>
+                    </span>
+                    <div class="card-body" style="margin-top: -15px">
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">sagopakajmer_resmi</strong>Harika
+                            bir
+                            konserdi!
+                        </p>
+                        <a href="#" style="text-decoration: none">
+                            <p class="card-text postuserfont" style="
+                                        margin-left: -4px;
+                                        margin-top: -14px;
+                                        color: rgb(139, 133, 133);
+                                        ">
+                                957.483 yorumun tümünü gör
+                            </p>
+                        </a>
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">ceza</strong>Helal
+                            olsun!
+                            🤯
+                        </p>
+                        <p class="card-text postuserfont" style="margin-top: -15px">
+                            <strong style="margin-left: -4px; margin-right: 5px">lyddd0</strong>Mükemmel
+                            bir şarkıcı!
+                            🤩
+                        </p>
+                        <p class="card-text" style="
+                                    margin-top: -10px;
+                                    margin-left: -4px;
+                                    font-size: 12px;
+                                    color: rgb(139, 133, 133);
+                                    ">
+                            1 GÜN ÖNCE
+                        </p>
+                    </div>
+                    <div class="card-footer" style="
+                                    color: rgb(139, 133, 133);
+                                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                                    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                                    'Helvetica Neue', sans-serif;
+                                    font-size: 14px;
+                                ">
+                        <span style="margin-left: -4px">Yorum Ekle...</span><span class="ml-4"
+                            style="color: #0095f6; opacity: 50%"><strong>Paylaş</strong></span>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 600px;">
+                    <div class="card-header">
+                        <img src="https://i.pinimg.com/originals/31/f3/7b/31f37be03a37d0e2c0d516386b0af590.jpg"
+                            class="mr-2" style="width: 35px; height: 35px; border-radius:50%" alt="profile" />
+                        <span class="postuserfont"><strong>fenerbahce</strong></span>
+                        <span class="mt-2"><strong><i class="fas fa-ellipsis-h ml-3"></i></strong></span>
+                    </div>
+                    <img src="https://icdn.ensonhaber.com/crop/1200x675/resimler/diger/kok/2022/07/06/IMG20220706031008.jpg"
+                        class="card-img-top" alt="Fenerbahçe" />
+                    <ul class="list-group list-group-horizontal mt-1" style="list-style-type: none; border: 0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-heart fa-lg"
+                                    style="color: black; position: relative; font-size: 23px"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-comment fa-lg" style="
+                                        color: black;
+                                        position: relative;
+                                        font-size: 23px;
+                                        margin-left: -11px;
+                                        "></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-paper-plane fa-lg" style="
+                                        color: black;
+                                        position: relative;
+                                        font-size: 23px;
+                                        margin-left: -11px;
+                                        "></i></a>
+                        </li>
+                        <span>
+                            <li class="nav-item ml-4">
+                                <a class="nav-link ml-2" href="#"><i class="far fa-bookmark fa-lg"
+                                        style="color: black; position: relative; font-size:23px"></i></a>
+                            </li>
+                        </span>
+                    </ul>
+                    <span>
+                        <img src="https://media.licdn.com/dms/image/v2/D5603AQGIdOvchGjSwg/profile-displayphoto-shrink_800_800/B56ZPhdz_0HIAg-/0/1734654510058?e=1744243200&v=beta&t=okfpejYKViJ7ZXZ5VpO2D43umt9Rr9gYkWvIE44dvZ8"
+                            class="mb-1 ml-3" style="width: 23px; height: 23px; border-radius: 50%" alt="like" />
+                        <span class="postuserfont"><strong>lyddd0</strong> ve
+                            <strong>49.123 diğer kişi</strong> beğendi</span>
+                    </span>
+                    <div class="card-body" style="margin-top: -15px">
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">fenerbahce</strong>Tüm
+                            yıldızlar bizim!
+                        </p>
+                        <a href="#" style="text-decoration: none">
+                            <p class="card-text postuserfont" style="
+                                        margin-left: -4px;
+                                        margin-top: -14px;
+                                        color: rgb(139, 133, 133);
+                                        ">
+                                938.321 yorumun tümünü gör
+                            </p>
+                        </a>
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">galatasaray</strong>Helal
+                            olsun!
+                            🤯
+                        </p>
+                        <p class="card-text postuserfont" style="margin-top: -15px">
+                            <strong style="margin-left: -4px; margin-right: 5px">besiktas</strong>Vay
+                            be! 😳
+                        </p>
+                        <p class="card-text" style="
+                                    margin-top: -10px;
+                                    margin-left: -4px;
+                                    font-size: 12px;
+                                    color: rgb(139, 133, 133);
+                                    ">
+                            3 SAAT ÖNCE
+                        </p>
+                    </div>
+                    <div class="card-footer" style="
+                                    color: rgb(139, 133, 133);
+                                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                                    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                                    'Helvetica Neue', sans-serif;
+                                    font-size: 14px;
+                                ">
+                        <span style="margin-left: -4px">Yorum Ekle...</span><span class="ml-4"
+                            style="color: #0095f6; opacity: 50%"><strong>Paylaş</strong></span>
+                    </div>
+                </div>
+                <div class="card mb-3" style="width: 600px;">
+                    <div class="card-header">
+                        <img src="https://yt3.googleusercontent.com/E8mO2mdu0nS2AtJ3Smv0E_0yugr1FNf7qvfKjukcsNmX1bFK8f0IZn2pCmtdnHPBkBBSTvoY=s900-c-k-c0x00ffffff-no-rj"
+                            class="mr-2" style="width: 35px; height: 35px; border-radius:50%" alt="profile" />
+                        <span class="postuserfont"><strong>patika.dev</strong></span>
+                        <span class="mt-2"><strong><i class="fas fa-ellipsis-h ml-3"></i></strong></span>
+                    </div>
+                    <img src="https://cdn.prod.website-files.com/6097e0eca1e87557da031fef/6718cc8406a9af320f28f9e9_FULLSTACK%20WEB%20DEVELOPMENT.png"
+                        class="card-img-top" alt="Bootcamp" />
+                    <ul class="list-group list-group-horizontal mt-1" style="list-style-type: none; border: 0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-heart fa-lg"
+                                    style="color: black; position: relative; font-size: 23px"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-comment fa-lg" style="
+                                        color: black;
+                                        position: relative;
+                                        font-size: 23px;
+                                        margin-left: -11px;
+                                        "></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-paper-plane fa-lg" style="
+                                        color: black;
+                                        position: relative;
+                                        font-size: 23px;
+                                        margin-left: -11px;
+                                        "></i></a>
+                        </li>
+                        <span>
+                            <li class="nav-item ml-4">
+                                <a class="nav-link ml-2" href="#"><i class="far fa-bookmark fa-lg"
+                                        style="color: black; position: relative; font-size:23px"></i></a>
+                            </li>
+                        </span>
+                    </ul>
+                    <span>
+                        <img src="https://www.jetbrains.com/guide/assets/csharp-logo-265a149e.svg" class="mb-1 ml-3"
+                            style="width: 23px; height: 23px; border-radius: 50%" alt="like" />
+                        <span class="postuserfont"><strong>csharp</strong> ve
+                            <strong>90.123 diğer kişi</strong> beğendi</span>
+                    </span>
+                    <div class="card-body" style="margin-top: -15px">
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">patika.dev</strong>Bize
+                            katıl! 🚀
+                        </p>
+                        <a href="#" style="text-decoration: none">
+                            <p class="card-text postuserfont" style="
+                                        margin-left: -4px;
+                                        margin-top: -14px;
+                                        color: rgb(139, 133, 133);
+                                        ">
+                                893 yorumun tümünü gör
+                            </p>
+                        </a>
+                        <p class="card-text postuserfont">
+                            <strong style="margin-left: -4px; margin-right: 5px">html</strong>En iyi
+                            bootcamp! 🥳
+                        </p>
+                        <p class="card-text postuserfont" style="margin-top: -15px">
+                            <strong style="margin-left: -4px; margin-right: 5px">css</strong>Hazırsanız
+                            başlıyoruz
+                            🤩
+                        </p>
+                        <p class="card-text" style="
+                                    margin-top: -10px;
+                                    margin-left: -4px;
+                                    font-size: 12px;
+                                    color: rgb(139, 133, 133);
+                                    ">
+                            3 GÜN ÖNCE
+                        </p>
+                    </div>
+                    <div class="card-footer" style="
+                                    color: rgb(139, 133, 133);
+                                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                                    Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                                    'Helvetica Neue', sans-serif;
+                                    font-size: 14px;
+                                ">
+                        <span style="margin-left: -4px">Yorum Ekle...</span><span class="ml-4"
                             style="color: #0095f6; opacity: 50%"><strong>Paylaş</strong></span>
                     </div>
                 </div>
@@ -130,61 +471,80 @@
                 <div class="col-sm-2 mt-4" style="position:sticky;">
                     <div class="card rightpanel" id="sticky-sidebar" style="width: 18rem ">
                         <div class="card-body d-flex flex-column">
-                            <div class="mt-3 d-flex align-items-center">
+                            <div class="mt-2 d-flex align-items-center ">
                                 <img src="https://media.licdn.com/dms/image/v2/D5603AQGIdOvchGjSwg/profile-displayphoto-shrink_800_800/B56ZPhdz_0HIAg-/0/1734654510058?e=1744243200&v=beta&t=okfpejYKViJ7ZXZ5VpO2D43umt9Rr9gYkWvIE44dvZ8"
                                     style="width: 30px; height: 30px; border-radius: 50%" alt="İlayda profil" />
-                                <a href=" https://www.instagram.com/lyddd0" target="_blank" class="ml-2">
+                                <a href=" https://www.instagram.com/lyddd0" target="_blank" class="ml-3">
                                     <span class="lyddd0"
-                                        style="font-size: 15px; color: black;"><strong>lyddd0</strong></span>
+                                        style="font-size: 15px; color: black; position: relative; bottom: 2px;"><strong>lyddd0</strong></span>
                                 </a>
                             </div>
                             <hr>
-                            <p style="font-size: 13px; color: rgb(66, 62, 58); margin-top: 20px;">Senin için önerilenler
+                            <p style="font-size: 13px; color: rgb(66, 62, 58); margin-top: 20px; margin-top: 1px;">
+                                Senin için önerilenler
                             </p>
-                            <div class="mt-3 d-flex align-items-center">
-                                <img src="https://www.fonajans.com.tr/wp-content/uploads/2022/07/aleyna-tilki2-997x1024.jpg"
+                            <a href="#"
+                                style="position: relative; left: 160px; font-size: small; bottom: 36px; color:#0095f6;">Tümünü
+                                Gör</a>
+                            <div class="d-flex align-items-center">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0iNV2dPTqc18NikpGGin7EbHSmXVprFJfgA&s"
                                     style="width: 30px; height: 30px; border-radius: 50%" alt="Aleyna Tilki profil" />
                                 <a href=" https://www.instagram.com/aleynatilkiofficial" target="_blank" class="ml-2">
                                     <span class="aleynatilki"
-                                        style="font-size: 15px; color: black;"><strong>aleynatilki</strong></span>
-                                    <div style="font-size: 13px; color: #0095f6;"><strong>Takip
-                                            Et</strong></div>
+                                        style="font-size: 15px; color: black; position: relative; top: 7px;"><strong>aleynatilki</strong></span>
+                                    <div
+                                        style="font-size: 13px; color: #0095f6; position: relative; left: 150px; bottom: 15px;">
+                                        <strong>Takip
+                                            Et</strong>
+                                    </div>
                                 </a>
                             </div>
                             <div class="mt-3 d-flex align-items-center">
-                                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcT--aKeTqZwRpeWSFjdmrRMlHZxJa87DQlWvhf94NXE_dxm0o5ds4aS1FlCpWeMhOnOdyofj4mJwUp_rOyd9SXrLg"
+                                <img src="https://iatkv.tmgrup.com.tr/3ab3be/0/0/0/0/0/0?u=https%3A%2F%2Fitkv.tmgrup.com.tr%2F2024%2F12%2F23%2F1734965082848.jpeg&mw=800"
                                     style="width: 30px; height: 30px; border-radius: 50%" alt="Haluk Levent profil" />
                                 <a href="https://www.instagram.com/haluklevent" target="_blank" class="ml-2">
                                     <span class="haluklevet"
-                                        style="font-size: 15px; color: black;"><strong>haluklevent</strong></span>
-                                    <div style="font-size: 13px; color: #0095f6;"><strong>Takip Et</strong></div>
+                                        style="font-size: 15px; color: black; position: relative; top: 7px;"><strong>haluklevent</strong></span>
+                                    <div
+                                        style="font-size: 13px; color: #0095f6; position: relative; left: 150px; bottom: 15px;">
+                                        <strong>Takip Et</strong>
+                                    </div>
                                 </a>
                             </div>
                             <div class="mt-3 d-flex align-items-center">
-                                <img src="https://www.gazetesaglam.com.tr/wp-content/uploads/2024/12/Besiktas-Diva.jpeg"
+                                <img src="https://yt3.googleusercontent.com/jr-K60nI76MplIzsY9-eSyrEcTCX5gcqM9nUiKxpOBKaFG2iMcyko9VFfD2EZEnTXq-HiVQ0nA=s900-c-k-c0x00ffffff-no-rj"
                                     style="width: 30px; height: 30px; border-radius: 50%" alt="besiktas profil" />
                                 <a href=" https://www.instagram.com/besiktas" target="_blank" class="ml-2">
-                                    <span class="besiktas"
-                                        style="font-size: 15px; color: black;"><strong>besiktas</strong></span>
-                                    <div style="font-size: 13px; color: #0095f6;"><strong>Takip Et</strong></div>
+                                    <span class="haluklevent"
+                                        style="font-size: 15px; color: black; position: relative; top: 7px;"><strong>besiktas</strong></span>
+                                    <div
+                                        style="font-size: 13px; color: #0095f6; position: relative; left: 150px; bottom: 15px;">
+                                        <strong>Takip Et</strong>
+                                    </div>
                                 </a>
                             </div>
                             <div class="mt-3 d-flex align-items-center">
-                                <img src="https://www.gazetesaglam.com.tr/wp-content/uploads/2024/12/Besiktas-Diva.jpeg"
-                                    style="width: 30px; height: 30px; border-radius: 50%" alt="besiktas profil" />
-                                <a href=" https://www.instagram.com/besiktas" target="_blank" class="ml-2">
-                                    <span class="besiktas"
-                                        style="font-size: 15px; color: black;"><strong>besiktas</strong></span>
-                                    <div style="font-size: 13px; color: #0095f6;"><strong>Takip Et</strong></div>
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWgOdK7vqXupWg30mNT19_IuF3cD8zBxQNkg&s"
+                                    style="width: 30px; height: 30px; border-radius: 50%" alt="teoman profil" />
+                                <a href=" https://www.instagram.com/teoman" target="_blank" class="ml-2">
+                                    <span class="teoman"
+                                        style="font-size: 15px; color: black; position: relative; top: 7px;"><strong>teoman</strong></span>
+                                    <div
+                                        style="font-size: 13px; color: #0095f6; position: relative; left: 150px; bottom: 15px;">
+                                        <strong>Takip Et</strong>
+                                    </div>
                                 </a>
                             </div>
                             <div class="mt-3 d-flex align-items-center">
-                                <img src="https://www.gazetesaglam.com.tr/wp-content/uploads/2024/12/Besiktas-Diva.jpeg"
-                                    style="width: 30px; height: 30px; border-radius: 50%" alt="besiktas profil" />
-                                <a href=" https://www.instagram.com/besiktas" target="_blank" class="ml-2">
-                                    <span class="besiktas"
-                                        style="font-size: 15px; color: black;"><strong>besiktas</strong></span>
-                                    <div style="font-size: 13px; color: #0095f6;"><strong>Takip Et</strong></div>
+                                <img src="https://biyoportre.com/wp-content/uploads/2024/09/Cagatay-Ulusoy.jpg"
+                                    style="width: 30px; height: 30px; border-radius: 50%" alt="Çağatay Ulusoy profil" />
+                                <a href=" https://www.instagram.com/cagatayulusoy" target="_blank" class="ml-2">
+                                    <span class="cagatayulusoy"
+                                        style="font-size: 15px; color: black; position: relative; top: 7px;"><strong>cagatayulusoy</strong></span>
+                                    <div
+                                        style="font-size: 13px; color: #0095f6; position: relative; left: 150px; bottom: 15px;">
+                                        <strong>Takip Et</strong>
+                                    </div>
                                 </a>
                             </div>
                             <br>
@@ -194,12 +554,34 @@
                                 <a href="#" style="color: rgb(197, 203, 208);">Koşullar</a>
                                 <a href="#" style="color: rgb(197, 203, 208);">Etiketler</a>
                                 <a href="#" style="color: rgb(197, 203, 208);">Dil</a>
+                                <a href="" style="color: rgb(197, 203, 208);">Basın</a>
+                                <a href="" style="color: rgb(197, 203, 208);">IP</a>
+                                <a href="" style="color: rgb(197, 203, 208);">İş Fırsatları</a>
+                                <br>
+                                <br>
+                                <p style="color: rgb(197, 203, 208);">2025 INSTAGRAM FROM LYD</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+    <br>
+    <br>
+    <div class="cerez" style="font-size: small; text-align: center;">
+        <a href="#" style="color: rgb(197, 203, 208);">Hakkında</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Yardım</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Koşullar</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Etiketler</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Dil</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Basın</a>
+        <a href="#" style="color: rgb(197, 203, 208);">IP</a>
+        <a href="#" style="color: rgb(197, 203, 208);">İş Fırsatları</a>
+        <br>
+        <br>
+        <p style="color: rgb(197, 203, 208);">2025 INSTAGRAM FROM LYD</p>
+    </div>
 
 
 </body>
