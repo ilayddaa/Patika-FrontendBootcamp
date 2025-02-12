@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Varsayılan kenar boşluklarını ve dolguları kaldır */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            flex-direction: column;
+            /* Flexbox kullanarak içeriği dikeyde hizalayın */
+            justify-content: center;
+            /* İçeriği dikeyde hizalayın */
+            align-items: center;
+            /* İçeriği yatayda hizalayın */
+            background-color: #f0ebeb;
+
+        }
+
+        .navbar {
+            left: 450px;
+            max-width: 400px;
+            bottom: 20px;
+        }
+
+        .logo img {
+            height: 50px;
+            /* İsteğinize göre yüksekliği ayarlayabilirsiniz */
+        }
+
+        .container {
+            margin: 0 auto;
+            /* Sayfayı ortala */
+            display: flex;
+            /* Flexbox kullanarak içeriği yatayda hizalayın */
+            justify-content: center;
+            /* İçeriği yatayda hizalayın */
+            align-items: center;
+            /* İçeriği dikeyde hizalayın */
+            height: 50vh;
+            /* Sayfa yüksekliğinin yarısı */
+            flex: 1;
+            /* İçeriği genişletmek için */
+        }
+
+        .daisy {
+            color: #c5cbd0;
+            text-align: center;
+            padding: 20px 0;
+            width: 600px;
+            height: 300px;
+            margin-left: 450px;
+            margin-top: 25px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .daisy2 {
+            margin-left: 380px;
+            color: #c5cbd0;
+            text-align: center;
+            padding: 20px 0;
+            width: 700px;
+            height: 230px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="flex items-center justify-between p-5 text-white" style="background-color: #2e473e;">
+        <a href="#" class="logo">✿ DAISY ✿</a>
+        <label for="menu-btn" class="menu-icon">
+            <i class="fa-solid fa-bars menu-hbmgr"></i>
+        </label>
+        <nav class="navbar flex space-x-4">
+            <a href="#home" class="hover:text-yellow-500 focus:text-yellow-500 active:text-yellow-700">Home</a>
+            <a href="#about" class="hover:text-yellow-500 focus:text-yellow-500 active:text-yellow-700">About</a>
+            <a href="#contact" class="hover:text-yellow-500 focus:text-yellow-500 active:text-yellow-700">Contact</a>
+            <button class="hover:text-yellow-500 focus:text-yellow-500 active:text-yellow-700">Sign In</button>
+        </nav>
+    </header>
+    <br>
+    <div class="container text-white text-center gap-4 flex" style="width: 700px;">
+        <div class="p-4 rounded shadow bg-white flex-auto">
+            <h1 class="text-4xl font-bold text-green-800 p-1">Welcome to Daisy</h1>
+            <h1 class="text-2xl font-medium text-black italic p-1">daisy from the flower word</h1>
+            <p class="text-sm text-black p-2">
+                'Sign up to join this world'
+            </p>
+            <br>
+            <input type="text" id="name" placeholder="Name ✿" class=" shadow bg-white text-center">
+            <br> <br>
+            <input type="text" id="email" placeholder="Email Adress ✿" class="r shadow bg-white text-center">
+            <br> <br>
+            <button
+                class="rounded shadow bg-white text-green-900 italic hover:text-yellow-500 focus:text-yellow-500 active:text-yellow-700 p-1">Sign
+                Up</button>
+        </div>
+        <div class="p-4 rounded shadow flex-auto bg-white">
+            <img src="https://ideacdn.net/shop/ir/87/myassets/products/460/yayilici-papatya-tohumu-creeping-daisy-1.jpg?revision=1735808859"
+                alt="Papatya" class="rounded shadow-xxl" style="width: 300px;">
+        </div>
+    </div>
+    <br>
+    <div class="container text-white text-center gap-4 flex" style="width: 600px;">
+        <div class="p-4 rounded shadow flex-auto bg-yellow-200">
+            <h3 class="text-lg font-bold text-green-900 italic underline">
+                Daisies,
+            </h3>
+            <p class="text-md text-green-900 italic">It is a harbinger of spring; symbolizes pure beauty and simplicity.
+            </p>
+        </div>
+        <div class="p-4 rounded shadow flex-auto bg-yellow-200">
+            <h3 class="text-lg font-bold text-green-900 italic underline">
+                White Daisies,
+            </h3>
+            <p class="text-md text-green-900 italic">It is one of the most delicate, innocent, pure, and beautiful
+                flowers of nature.</p>
+        </div>
+        <div class="p-4 rounded shadow flex-auto bg-yellow-200">
+            <h3 class="text-lg font-bold text-green-900 italic underline">
+                Daisy Tea,
+            </h3>
+            <p class="text-md text-green-900 italic">It reduces stress and relaxes with its calming effectt.</p>
+        </div>
+    </div>
+    <div class="container text-center gap-4 flex" style="width: 900px;">
+        <div class="p-4 rounded shadow bg-white basis-2/10">
+            <img src="https://www.medicalpark.com.tr/uploads/papatya-cayinin-faydalari(1).jpg" alt="Papatya Çayı">
+        </div> <!-- 2/10 = 20% -->
+        <div class="p-4 rounded shadow bg-yellow-100 basis-2/3">
+            <h2 class="text-2xl font-bold italic underline text-green-900">Daisy Tea</h2>
+            <p class="font-medium italic text-green-900" style="width: 400px;">
+                Daisy tea is a popular herbal tea that is made from the flowers of the daisy plant. It has a light,
+                floral flavor and is often used for its calming and relaxing properties. Daisy tea is known for its
+                ability to reduce stress and anxiety, promote relaxation, and improve sleep quality. It is also
+                believed to have anti-inflammatory and antioxidant properties, making it a popular choice for those
+                looking to improve their overall health and well-being. Daisy tea is caffeine-free and can be enjoyed
+                hot or cold.
+            </p>
+        </div> <!-- 2/3 = 66.67% -->
+    </div>
+    <br>
+    <div class="daisy rounded shadow bg-white">
+        <h2 class="text-4xl font-bold text-green-900">DAISY</h2>
+        <p class="text-medium text-green-900 italic text-left p-5">
+            Daisy is a symbol of purity, innocence, and true love. It is a harbinger of spring and a sign of new
+            beginnings. Daisies are known for their simple beauty and bright, cheerful appearance. They are often used
+            to represent love, friendship, and happiness. Daisies are also a popular choice for weddings and other
+            special occasions. Whether you are looking to brighten up your garden or send a message of love and
+            friendship, daisies are the perfect choice. So why not bring a little bit of sunshine into your life with a
+            bouquet of beautiful daisies?
+        </p>
+    </div>
+    <br> <br>
+    <div class="container  text-center gap-4 flex" style="width: 900px;">
+        <div class="p-4 rounded shadow bg-white">
+            <img src="https://platincdn.com/4009/pictures/KEOBGMVDRR106202212753_brachycome-karisikli-renkli.jpg"
+                alt="Renkli Papatyalar" style="width: 300px;">
+        </div> <!-- 2/10 = 20% -->
+        <div class="p-4 rounded shadow bg-pink-100 basis-1/3">
+            <h2 class="text-2xl font-bold italic underline text-green-900">Colorful Daisies: A Burst of Nature’s Beauty
+            </h2>
+            <p class="font-medium italic text-green-900" style="width: 300px;">Colorful daisies bring a vibrant touch to
+                gardens and bouquets
+                with their bright hues and cheerful appearance. While
+                traditional daisies are known for their classic white petals and yellow centers, colorful varieties come
+                in shades of
+                pink, purple, orange, and red, adding diversity and charm to any setting.</p>
+        </div> <!-- 2/3 = 66.67% -->
+    </div>
+    <br>
+    <div class="container text-white text-center gap-4 flex" style="width: 600px;">
+        <div class="p-4 rounded shadow flex-auto bg-pink-200">
+            <h3 class="text-lg font-bold text-pink-900 italic underline">
+                Daisies
+            </h3>
+            <p class="text-md text-pink-900 italic">Daisy Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo.
+            </p>
+        </div>
+        <div class="p-4 rounded shadow flex-auto bg-pink-200">
+            <h3 class="text-lg font-bold text-pink-900 italic underline">
+                Daisies,
+            </h3>
+            <p class="text-md text-pink-900 italic">Daisies Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            </p>
+        </div>
+        <div class="p-4 rounded shadow flex-auto bg-pink-200">
+            <h3 class="text-lg font-bold text-pink-900 italic underline">
+                Daisy,
+            </h3>
+            <p class="text-md text-pink-900 italic">Daisies Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            </p>
+        </div>
+    </div>
+    <div class="daisy2 rounded shadow-full bg-white">
+        <h2 class="text-3xl font-bold text-green-900">Our team is here to help your</h2>
+        <a href="#" class="text-pink-900 underline ">Meet Us</a>
+        <br>
+        <img src="https://esular.com/wp-content/uploads/2019/12/bahcivan.jpg" class="rounded shadow" alt="bahcivan"
+            width="200px" style="margin-left: 250px;">
+    </div>
+    <br>
+    <footer class="" style="font-size: small; text-align: center;">
+        <a href="#" style="color: rgb(197, 203, 208);">Hakkında</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Yardım</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Koşullar</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Etiketler</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Dil</a>
+        <a href="#" style="color: rgb(197, 203, 208);">Basın</a>
+        <a href="#" style="color: rgb(197, 203, 208);">IP</a>
+        <a href="#" style="color: rgb(197, 203, 208);">İş Fırsatları</a>
+        <br>
+        <br>
+        <p style="color: rgb(197, 203, 208);">2025 DESIGNED FROM LYD</p>
+    </footer>
+</body>
+
+</html>
