@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+    }
+
+    .a {
+        width: 100%;
+    }
+
+    .navbar-brand {
+        margin-left: 100px;
+    }
+
+    .footer {
+        background-color: #f0f0f0;
+        color: #c5cbd0;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .footer a {
+        color: #333434;
+        margin: 0 10px;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        text-decoration: underline;
+    }
+
+    .footer p {
+        margin: 10px 0 0;
+        font-size: small;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+        color: #6f3874;
+        font-size: 24px;
+    }
+
+    .social-icons a:hover {
+        color: #b823b3;
+    }
+</style>
+
+<body>
+    <div>
+        <nav class="navbar navbar-light bg-light">
+            <!-- Linkler -->
+            <div class="flex space-x-12">
+                <a href="#" class="text-purple-600 font-medium border-b-2 border-purple-600 pb-1">Link</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600">Link</a>
+                <a href="#" class="text-gray-700 hover:text-purple-600">Link</a>
+            </div>
+            <a class="navbar-brand" href="#">
+                <img src="https://i.pinimg.com/originals/2a/ff/5d/2aff5d3ae14a89142c768228c5c2d4ec.png" alt="Logo"
+                    style="width: 40px;">
+            </a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" style="border: 0px;" type="search" placeholder="Search"
+                    aria-label="Search">
+                <button class=" my-2 my-sm-0 bg-purple-700 text-white w-20 h-10 rounded" type="submit">Log
+                    in</button>
+            </form>
+        </nav>
+    </div>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4 font-weight-bold">Quisquam
+                necesitta
+                <br>
+                vel <span class="text-purple-700">laborum <br> doloribus</span>delectus
+            </h1> <br>
+            <p class="lead font-medium">Cupidate minima voluptate temporibus quia? <br>
+                Architecto beatae esse ab amet vero eaque explicabo!</p> <br>
+            <button class=" my-2 my-sm-0 bg-purple-700 text-white w-40 h-12" style="border-radius: 5px;"
+                type="submit">Get started</button>
+            <button class=" my-2 my-sm-0 text-dark w-40 h-12 font-medium rounded" type="submit">Learn
+                more</button>
+        </div>
+    </div>
+    <div>
+        <div class="container" style="width: 700px;">
+            <h2 class="font-bold text-2xl">What our customers are saying about us</h2> <br> <br>
+            <div class="grid grid-rows-2 grid-flow-col gap-12 text-dark bg-white text-center">
+                <!-- grid-cols: sütun sayısını belirler. -->
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden w-80">
+                    <!-- Kart İçeriği -->
+                    <div class="p-6 text-center">
+                        <!-- Tırnak İşareti -->
+                        <div class="text-purple-600 text-3xl">❝</div>
+
+                        <p class="text-gray-700 italic">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi
+                            exercitationem.
+                        </p>
+
+                        <div class="text-purple-600 text-3xl mt-2">❞</div>
+                    </div>
+
+                    <!-- Mor Alt Bölüm -->
+                    <div class="bg-purple-600 text-white text-center p-5">
+                        <h3 class="font-bold">Distinctio Animi</h3>
+                        <p class="text-sm opacity-80">Aliquam Illum</p>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden w-80">
+                    <!-- Kart İçeriği -->
+                    <div class="p-6 text-center">
+                        <!-- Tırnak İşareti -->
+                        <div class="text-purple-600 text-3xl">❝</div>
+
+                        <p class="text-gray-700 italic">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi
+                            exercitationem.
+                        </p>
+
+                        <div class="text-purple-600 text-3xl mt-2">❞</div>
+                    </div>
+
+                    <!-- Mor Alt Bölüm -->
+                    <div class="bg-purple-600 text-white text-center p-5">
+                        <h3 class="font-bold">Distinctio Animi</h3>
+                        <p class="text-sm opacity-80">Aliquam Illum</p>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden w-80">
+                    <!-- Kart İçeriği -->
+                    <div class="p-6 text-center">
+                        <!-- Tırnak İşareti -->
+                        <div class="text-purple-600 text-3xl">❝</div>
+
+                        <p class="text-gray-700 italic">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi
+                            exercitationem.
+                        </p>
+
+                        <div class="text-purple-600 text-3xl mt-2">❞</div>
+                    </div>
+
+                    <!-- Mor Alt Bölüm -->
+                    <div class="bg-purple-600 text-white text-center p-5">
+                        <h3 class="font-bold">Distinctio Animi</h3>
+                        <p class="text-sm opacity-80">Aliquam Illum</p>
+                    </div>
+                </div>
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden w-80">
+                    <!-- Kart İçeriği -->
+                    <div class="p-6 text-center">
+                        <!-- Tırnak İşareti -->
+                        <div class="text-purple-600 text-3xl">❝</div>
+
+                        <p class="text-gray-700 italic">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus quibusdam, eligendi
+                            exercitationem.
+                        </p>
+
+                        <div class="text-purple-600 text-3xl mt-2">❞</div>
+                    </div>
+
+                    <!-- Mor Alt Bölüm -->
+                    <div class="bg-purple-600 text-white text-center p-5">
+                        <h3 class="font-bold">Distinctio Animi</h3>
+                        <p class="text-sm opacity-80">Aliquam Illum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <div class="container p-5" style="width: 700px;">
+            <h2 class="font-bold text-2xl p-4">Our pricing</h2>
+            <div class="p-3" style="text-align: left; background-color: rgb(238, 240, 241);">
+                <h2 class="text-2xl font-bold">Contact Us</h2> <br>
+                <div class="labelinput">
+                    <label for="name" class="font-bold text-lg p-1">Name</label> <br>
+                    <input type="text" id="name" name="name" placeholder="Your name"
+                        class="border-3 rounded-lg p-2 m-0 w-full">
+                    <br> <br>
+                    <label for="email" class="font-bold text-lg p-1">Email</label> <br>
+                    <input type="email" id="email" name="email" placeholder="Your email"
+                        class="border-3 rounded-lg p-2 m-0 w-full">
+                    <br> <br>
+                    <label for="message" class="font-bold text-lg p-1">Message</label> <br>
+                    <textarea id="message" name="message" placeholder="Message..."
+                        class="border-3 rounded-lg p-2 m-0 w-full"></textarea> <br> <br>
+                    <button class="my-2 my-sm-0 bg-purple-700 text-white w-full h-12" style="border-radius: 5px;"
+                        type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <a href="#">Shop</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <a href="#">Blog</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+            <div class="social-icons">
+                <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://www.google.com" target="_blank"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
