@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <title>Javascript</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, rgb(12, 21, 35) 0%, rgb(6, 46, 99) 100%);
+            min-height: 100vh;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+
+        .clock {
+            position: relative;
+            text-align: center;
+            color: #066cbf;
+            font-size: 60px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            letter-spacing: 7px;
+            text-shadow: 0 0 20px rgba(6, 108, 191, 0.5);
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+
+            /* text-shadow animasyonu */
+            from {
+                text-shadow: 0 0 10px rgba(6, 108, 191, 0.5);
+            }
+
+            to {
+                text-shadow: 0 0 20px rgba(6, 108, 191, 0.8);
+            }
+        }
+
+        .text1 {
+            position: relative;
+            text-align: center;
+            color: #68bff5;
+            font-size: 50px;
+            font-family: 'Times New Roman', Times, serif;
+            letter-spacing: 7px;
+            transition: all 0.3s ease;
+        }
+
+        .text1:hover {
+            transform: scale(1.02);
+            color: #8cd3ff;
+        }
+
+        .text2 {
+            position: relative;
+            text-align: center;
+            color: #68bff5;
+            font-size: 40px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            letter-spacing: 7px;
+            margin-right: 100px;
+            margin-left: 100px;
+            transition: all 0.3s ease;
+        }
+
+        .text2:hover strong {
+            color: #8cd3ff;
+        }
+
+        img {
+            margin-top: 120px;
+            width: 17%;
+            opacity: 0;
+            animation: fadeIn 1.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+
+            /* logo animasyonu */
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-dark">
+    <div class="text-center">
+        <img src="https://cdn.sanity.io/images/9kdepi1d/production/65c832d202a503b15d99e628f4313782f3ef50db-300x62.png"
+            alt="Logo">
+    </div>
+    <div class="text1 text-center">
+        Merhaba, <strong><span id="myName" class="font-italic"></span></strong>! Hoş geldin!
+    </div>
+    <div class="clock" id="clock"></div>
+    <div class="text2 text-center">
+        tarihinde
+        <strong>Kodluyoruz Frontend Web Development Patikası</strong>'nın
+        Javascript bölümü 1. Ödevindesiniz.
+    </div>
+    <script>
+        function updateClock() {
+            var now = new Date(); // şu anki tarihi alıyoruz
+            var hours = now.getHours(); // saat bilgisini alıyoruz
+            var minutes = now.getMinutes(); // dakika bilgisini alıyoruz
+            var seconds = now.getSeconds(); // saniye bilgisini alıyoruz
+            var ampm = hours >= 12 ? 'PM' : 'AM'; // am ve pm için bir değişken oluşturuyoruz
+            hours = hours % 12; // saat bilgisini 12'ye bölüyoruz
+            hours = hours ? hours : 12; // burada 0 yerine 12 yazıyoruz
+            minutes = minutes < 10 ? '0' + minutes : minutes; // dakika bilgisini 10'dan küçükse başına 0 ekliyoruz
+            seconds = seconds < 10 ? '0' + seconds : seconds; // saniye bilgisini 10'dan küçükse başına 0 ekliyoruz
+            var strTime = hours + ':' + minutes + ':' + seconds + ' ' + ampm; // tüm bilgileri birleştiriyoruz
+            document.getElementById('clock').innerText = strTime; // saat bilgisini güncelliyoruz
+        }
+
+        function askName() { // ad sormak için bir fonksiyon oluşturuyoruz
+            var name = prompt("Lütfen adınızı girin:");
+            if (name) {
+                document.getElementById('myName').innerText = name;
+            }
+        }
+
+        setInterval(updateClock, 1000); // her 1 saniyede bir saat bilgisini güncellemek için bir fonksiyon çağırıyoruz
+        updateClock(); // sayfa yüklendiğinde saat bilgisini güncelleyelim
+        askName(); // askname'in amacı sayfa yenilendiğinde adı sormak
+    </script>
+</body>
+
+</html>
