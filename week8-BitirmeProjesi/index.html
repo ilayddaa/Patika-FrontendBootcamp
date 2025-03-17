@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportCenter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+
+</head>
+<style>
+    body {
+        background-color: rgb(232, 246, 250);
+        min-height: 100vh;
+        /* Ekranın tamamını kaplar */
+        margin: 0;
+        /* Sayfanın kenar boşluklarını sıfırlar */
+    }
+
+    .stars {
+        background-image: url('./pht/hero-man.jpg');
+        /* Arka plan resmi ekler */
+        height: 92vh;
+        /* Yükseklik */
+        background-size: cover;
+        /* Resmi kaplar */
+        background-position: center;
+        /* Resmi merkezler */
+        position: relative;
+        /* Pozisyonu ayarlar */
+        background-repeat: no-repeat;
+        /* Resmi tekrar etmez */
+        margin-bottom: 95px;
+    }
+
+    .joinus {
+        padding: 3px 5px;
+        /* Butonun iç boşluğunu ayarlar */
+        color: rgb(255, 255, 255);
+        /* Yazı rengini ayarlar */
+    }
+
+    .container {
+        align-items: center;
+        /* Elemanları dikeyde hizalar */
+        justify-content: center;
+        /* Elemanları yatayda hizalar */
+        text-align: left;
+        /* Yazıları sola hizalar */
+        margin-left: 300px;
+        /* Container'ı sola hizalar */
+        height: 600px;
+        /* Yüksekliği ayarlar */
+        margin-bottom: 20px;
+        /* Alt boşluğu ayarlar */
+    }
+
+    .baslik {
+        padding: 3px 5px;
+        /* Başlık iç boşluğunu ayarlar */
+    }
+
+    .yazi {
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        width: 900px;
+        /* Yazı genişliğini ayarlar */
+        height: 140px;
+        /* Yazı yüksekliğini ayarlar */
+    }
+
+    .container .buttons {
+        padding: 10px 20px;
+        /* Butonun iç boşluğunu ayarlar */
+    }
+
+    .container .buttons2 {
+        padding: 10px 20px;
+        /* Butonun iç boşluğunu ayarlar */
+        margin-left: 40px;
+        /* Butonu sola hizalar */
+        border: 1px solid rgb(255, 255, 255);
+    }
+
+    /* Düzeltilmiş box stili */
+    .box-container {
+        position: absolute;
+        /* Pozisyonu ayarlar. absolute ile stars div'inin içinde konumlandırır */
+        top: 710px;
+        /* Üst boşluğu ayarlar */
+        left: 0;
+        /* Sol boşluğu ayarlar */
+        right: 0;
+        /* Sağ boşluğu ayarlar */
+        width: 100%;
+        /* Genişliği ayarlar */
+    }
+
+    .box {
+        display: flex;
+        /* Flexbox kullanır. flexbox amacı elemanları hizalamak ve aralarındaki boşlukları ayarlamaktır */
+        justify-content: center;
+        /* Elemanları yatayda hizalar */
+        align-items: center;
+        /* Elemanları dikeyde hizalar */
+        gap: 20px;
+        /* Elemanlar arasındaki boşluğu ayarlar */
+        padding: 5px;
+        /* Box'ın iç boşluğunu ayarlar */
+        color: rgb(255, 255, 255);
+        font-size: 50px;
+        font-weight: bold;
+    }
+
+    .boxs {
+        padding: 20px;
+        /* Box'ın iç boşluğunu ayarlar */
+        text-align: center;
+        /* Yazıları ortalar */
+        font-size: 20px;
+        font-weight: bold;
+        background-color: white;
+        color: black;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 175px;
+        height: 100px;
+    }
+
+    .container .our-classes {
+        margin-left: 330px;
+        margin-bottom: 380px;
+        /* Alt boşluğu ayarlar */
+    }
+
+    .container .our-classes::after {
+        content: "";
+        display: block;
+        width: 50%;
+        height: 5px;
+        background-color: #f1b00c;
+        margin: 8px auto 0;
+        border-radius: 300px;
+        /* Yuvarlak köşeler ekler */
+    }
+
+    .container .classes-text {
+        font-size: 18px;
+        color: rgb(18, 18, 18);
+        width: 600px;
+        height: 20px;
+        margin-top: -370px;
+        text-align: center;
+        margin-left: 130px;
+    }
+
+    .four-pic {
+        width: 300px;
+        height: 200px;
+        margin-top: -270px;
+        margin-left: 600px;
+    }
+
+    .four {
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        width: 600px;
+        height: 200px;
+        margin-top: 40px;
+    }
+
+    .tab-buttons {
+        margin-top: -230px;
+        justify-content: center;
+        align-items: center;
+        margin-right: 300px;
+    }
+
+    .classes2 {
+        height: 390px;
+        background-color: white;
+    }
+
+    .classes-text {
+        margin-left: 80px;
+        margin-bottom: 330px;
+        height: 200px;
+        width: 400px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .classes-img {
+        height: 200px;
+        width: 300px;
+        margin-top: -200px;
+        margin-left: 50px;
+    }
+
+    .types {
+        width: 140px;
+        height: 25px;
+        border: 1px solid #ccc;
+        font-weight: 100;
+        font-family: 'Times New Roman', Times, serif;
+        margin-left: 20px;
+    }
+
+    .classes {
+        background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
+        height: 95vh;
+    }
+
+    .trainer {
+        height: 65vh;
+    }
+
+    .trainer-pic {
+        width: 200px
+    }
+
+    .trainer-container {
+        display: flex;
+        justify-content: space-around;
+        /* Kartları eşit şekilde yayar */
+        gap: 20px;
+        /* Kartlar arasına boşluk ekler */
+        flex-wrap: wrap;
+        /* Ekran daraldığında alt satıra geçer */
+        height: 80vh;
+        /* Yüksekliği ayarlar */
+    }
+
+    .trainer-baslik {
+        text-align: center;
+        /* Yazıları ortalar */
+        margin-bottom: 20px;
+    }
+
+    .trainer-sentence {
+        text-align: center;
+        width: 800px;
+    }
+
+    .trainer-card {
+        position: relative;
+        /* Görsel ve isim aynı konumda olacak */
+        overflow: hidden;
+        /* Kartın içeriğini keser */
+        cursor: pointer;
+        /* Üzerine gelince el işareti olur */
+        width: 250px;
+        /* Kartın genişliğini ayarlar */
+        margin-bottom: -100px;
+        height: 300px;
+    }
+
+    .trainer-name {
+        position: absolute;
+        width: 300px;
+        margin-top: 200px;
+        top: 0;
+        /* Üstte tam genişlik */
+        left: 0;
+        /* Dikeyde tam genişlik */
+        right: 0;
+        /* Yatayda tam genişlik */
+        color: rgb(221, 218, 218);
+        padding: 10px;
+        text-align: center;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: none;
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+    }
+
+    .trainer-name.show {
+        display: block;
+    }
+
+    .trainer-name.hidden {
+        display: none;
+    }
+
+    .buy {
+        width: 750px;
+        margin-bottom: 300px;
+        text-align: center;
+        height: 400px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .trainer-baslik2 {
+        margin-bottom: 20px;
+    }
+
+    .trainer-img2 {
+        width: 170px;
+        border: #84795c solid 2px;
+    }
+
+    .trainers {
+        background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
+    }
+</style>
+
+<body>
+    <!-- Navbar Başlangıç -->
+    <div class="stars">
+        <nav class="navbar p-0 text-white fixed w-full top-0 left-0 absolute">
+            <div class="m-auto flex justify-center items-center">
+                <img src="./pht/logo.png" alt="">
+                <ul class="hidden md:flex space-x-6 ml-20">
+                    <li><a href="#home" class="hover:text-gray-300 font-bold">Home</a></li>
+                    <li><a href="#classes" class="hover:text-gray-300 font-bold">Classes</a></li>
+                    <li><a href="#trainer" class="hover:text-gray-300 font-bold">Trainer</a></li>
+                    <li><a href="#review" class="hover:text-gray-300 font-bold">Review</a></li>
+                    <li><a href="#contact" class="hover:text-gray-300 font-bold">Contact</a></li>
+                    <button>
+                        <a href="#joinus" class="joinus hover:text-gray-300 font-bold bg-yellow-600 rounded-sm">JOIN
+                            US</a>
+                    </button>
+                </ul>
+            </div>
+        </nav>
+        <!-- Navbar Bitiş -->
+        <div class="pt-20">
+            <section id="home" class="h-screen flex items-center justify-center">
+                <div class="container">
+                    <h2 class="baslik text-xl font-bold text-white rounded bg-blue-900 inline-block">POWERFULL</h2>
+                    <h2 class="text-7xl font-bold text-white p-1">Group <br>
+                        Practice <br>
+                        With Trainer
+                    </h2> <br>
+                    <p class="yazi font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sequi
+                        perspiciatis
+                        error deserunt
+                        delectus laudantium fuga accusantium voluptatum aspernatur molestiae! Quae nam ea doloremque
+                        quia odit unde non voluptas consequatur. Lorem ipsum dolor sit amet consectetur adipisicing.
+                    </p>
+                    <button>
+                        <a href="#" class="buttons joinus hover:text-gray-300 font-bold rounded-sm bg-blue-900">Sign
+                            Up</a>
+                    </button>
+                    <button>
+                        <a href="#" class="buttons2 joinus hover:text-gray-300 font-bold rounded-sm">Details</a>
+                    </button>
+                </div>
+                <!-- Boxları ayrı bir container içine aldım ve stars div'inin içinde konumlandırdım -->
+                <div class="box-container">
+                    <div class="box">
+                        <div class="boxs">
+                            <p class="text-xl font-bold">405</p>
+                            <p class="font-bold text-blue-900">Work Out</p>
+                        </div>
+                        <div class="boxs">
+                            <p class="text-xl font-bold">405</p>
+                            <p class="font-bold text-blue-900">Work Out</p>
+                        </div>
+                        <div class="boxs">
+                            <p class="text-xl font-bold">305</p>
+                            <p class="font-bold text-blue-900">Working Hour</p>
+                        </div>
+                        <div class="boxs">
+                            <p class="text-xl font-bold">705</p>
+                            <p class="font-bold text-blue-900">Happy Client</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+    <br> <br>
+    <div class="pt-5 classes">
+        <section id="classes" class="h-screen flex items-center justify-center">
+            <div class="container fixed-header align-items-center justify-content-center">
+                <h2 class="our-classes text-3xl font-bold text-center inline-block text-blue-900">
+                    OUR CLASSES</h2>
+                <p class="classes-text font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                    veritatis aliquam
+                    tempore iste
+                    temporibus veniam amet!
+                </p>
+                <!-- Butonlar -->
+                <div class="tab-buttons flex justify-center space-x-4">
+                    <button
+                        class="tab-button bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300"
+                        data-tab="#">Yoga</button>
+                    <button
+                        class="tab-button bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300"
+                        data-tab="group">Group</button>
+                    <button
+                        class="tab-button bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300"
+                        data-tab="solo">Solo</button>
+                    <button
+                        class="tab-button bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300"
+                        data-tab="stretching">Stretching</button>
+                </div>
+                <!-- İçerikler -->
+                <div class="mt-6">
+                    <div id="#" class="four tab-content w-1/2 font-bold">
+                        <h3 class="text-3xl">Why are your Yoga?</h3> <br>
+                        <p>Yoga is great for mind and body balance. Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Ratione quam aliquid error, aspernatur cum mollitia, et atque accusantium officiis
+                            voluptatem illum. Amet, aspernatur? Ratione praesentium minima explicabo, dignissimos
+                            accusamus ab!</p> <br>
+                        <h3 class="text-3xl font-bold">When comes Yoga Your Time?</h3> <br>
+                        <p>
+                            Saturday-Sunday: 8:00am - 10:00am <br>
+                            Monday-Friday: 6:00pm - 8:00pm <br>
+                            Tuesday-Saturday: 10:00am - 12:00pm
+                        </p>
+                        <img src="./pht/yoga.jpg" alt="yoga" class="four-pic shadow-lg rounded-lg">
+                    </div>
+                    <div id="group" class="four tab-content hidden font-bold">
+                        <h3 class="text-3xl">Why are your Group Training?</h3> <br>
+                        <p>
+                            Perfect for those who like to train with others and have fun. Lorem ipsum dolor sit amet
+                            consectetur adipisicing elit. Architecto fugiat fuga inventore illo quam natus voluptatibus
+                            earum minus, sunt, recusandae magni distinctio cumque reprehenderit reiciendis laborum
+                            eveniet. Consectetur, recusandae minima?
+                        </p> <br>
+                        <h3 class="text-3xl font-bold">When comes Group Your Time?</h3> <br>
+                        <p>
+                            Friday-Sunday: 8:00am - 10:00am <br>
+                            Wednesday-Thursday: 6:00pm - 8:00pm <br>
+                            Tuesday-Monday: 10:00am - 12:00pm
+                        </p>
+                        <img src="./pht/group.webp" alt="group" class="four-pic shadow-lg rounded-lg">
+                    </div>
+                    <div id="solo" class="four tab-content hidden font-bold">
+                        <h3 class="text-3xl">Why are your Solo?</h3> <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fugiat fuga inventore
+                            illo
+                            consectetur adipisicing elit. Architecto fugiat fuga inventore illo quam natus voluptatibus
+                            earum minus, sunt, recusandae magni distinctio cumque reprehenderit reiciendis laborum
+                            eveniet. Consectetur, recusandae minima?
+                        </p> <br>
+                        <h3 class="text-3xl font-bold">When comes Solo Your Time?</h3> <br>
+                        <p>
+                            Sunday-Monday: 8:00am - 10:00am <br>
+                            Tuesday-Thursday: 6:00pm - 8:00pm <br>
+                            Friday-Monday: 10:00am - 12:00pm
+                        </p>
+                        <img src="./pht/solo.jpg" alt="Solo" class="four-pic shadow-lg rounded-lg">
+                    </div>
+                    <div id="stretching" class="four tab-content hidden font-bold">
+                        <h3 class="text-3xl">Why are your Stretching?</h3> <br>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Architecto fugiat fuga inventore illo quam natus voluptatibus
+                            earum minus, sunt, recusandae magni distinctio cumque reprehenderit reiciendis laborum
+                            eveniet. Consectetur, recusandae minima?
+                        </p> <br>
+                        <h3 class="text-3xl font-bold">When comes Stretching Your Time?</h3> <br>
+                        <p>
+                            Tuesday-Sunday: 8:00am - 10:00am <br>
+                            Friday-Thursday: 6:00pm - 8:00pm <br>
+                            Monday-Monday: 10:00am - 12:00pm
+                        </p>
+                        <img src="./pht/stret.webp" alt="Stret" class="four-pic shadow-lg rounded-lg">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="classes2">
+        <section id="classes" class="h-screen flex items-center justify-center bg-white">
+            <div class="classes-text font-bold">
+                <h3 class="text-3xl text-blue-900">BMI Calculator</h3> <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo non ratione quibusdam quaerat
+                    aliquam commodi laudantium doloremque</p>
+                <p> <br>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam, esse! Quisquam, quidem quas
+                    voluptates quae, quos.
+                </p> <br>
+                <input type="number" class="types shadow" placeholder="Your Height"> cm
+                <input type="number" class="types shadow" placeholder="Your Weight"> kg
+            </div>
+            <div>
+                <img src="./pht/bmi-index.jpg" alt="" class="classes-img shadow-lg rounded-lg">
+            </div>
+        </section>
+    </div>
+    <div class="pt-20 trainer">
+        <section id="trainer" class="trainers h-screen flex items-center justify-center">
+            <div>
+                <h1 class="trainer-baslik text-3xl font-bold text-blue-900">OUR BEST TRAINERS</h1>
+                <p class="trainer-sentence font-bold">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Optio
+                    iure nisi,
+                    molestias reiciendis
+                    praesentium cumque placeat omnis natus sit blanditiis.</p> <br>
+                <div class="trainer-container">
+                    <div class="trainer-card">
+                        <img src="./pht/trainer1.jpg" alt="Trainer 1" class="trainer-img shadow-lg rounded-lg">
+                        <div class="trainer-name hidden text-3xl">Celina Senda <br>
+                            <span class="text-lg italic text-blue-900">Yoga Trainer</span>
+                        </div>
+                    </div>
+
+                    <div class="trainer-card">
+                        <img src="./pht/trainer2.jpg" alt="Trainer 2" class="trainer-img shadow-lg rounded-lg">
+                        <div class="trainer-name hidden text-3xl">John Doe <br>
+                            <span class="text-lg italic text-yellow-900">Fitness Trainer</span>
+                        </div>
+                    </div>
+
+                    <div class="trainer-card">
+                        <img src="./pht/trainer3.jpg" alt="Trainer 3" class="trainer-img shadow-lg rounded-lg">
+                        <div class="trainer-name hidden text-3xl">Jane Doe <br>
+                            <span class="text-lg italic text-pink-900">Cardio Trainer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="pt-20 trainer">
+        <section id="trainer" class="buys h-screen flex items-center justify-center bg-white">
+            <div class="buy">
+                <h1 class="trainer-baslik2 text-3xl font-bold text-blue-900">PURCHASE FROM US</h1>
+                <p class="trainer-sentence2 font-bold">Lorem ipsum dolor sit amet consectetur adipisicing
+                    elit. Optio
+                    iure nisi,
+                    molestias reiciendis
+                    praesentium cumque placeat omnis natus sit blanditiis.</p> <br>
+                <div class="grid grid-cols-4 gap-2 text-white text-center">
+                    <!-- grid-cols: sütun sayısını belirler. -->
+                    <div class="trainer-img2 shadow-lg rounded-lg bg-white">
+                        <img src="./pht/purchase1.jpg" alt="purchase1">
+                        <p class="text-black font-bold">Kettlebell / 5kg</p>
+                        <p class="text-black text-sm"><span class="line-through">89,99$</span>/ 79,99$</p>
+                        <a href="#" class="text-black text-sm font-bold">🛒 Add To Cart</a></p>
+                    </div>
+                    <div class="trainer-img2 shadow-lg rounded-lg bg-white">
+                        <img src="./pht/purchase2.jpg" alt="purchase2">
+                        <p class="text-black font-bold">Treadmill</p>
+                        <p class="text-black text-sm"><span class="line-through">899,99$</span>/ 599.99$</p>
+                        <a href="#" class="text-black text-sm font-bold">🛒 Add To Cart</a></p>
+                    </div>
+                    <div class="trainer-img2 shadow-lg rounded-lg bg-white">
+                        <img src="./pht/purchase3.jpg" alt="purchase3">
+                        <p class="text-black font-bold">Adjustable Dumbell</p>
+                        <p class="text-black text-sm"><span class="line-through">89,99$</span>/ 79,99$</p>
+                        <a href="#" class="text-black text-sm font-bold">🛒 Add To Cart</a></p>
+                    </div>
+                    <div class="trainer-img2 shadow-lg rounded-lg bg-white">
+                        <img src="./pht/purchase4.jpg" alt="purchase4">
+                        <p class="text-black font-bold">Kettlebell / 3kg</p>
+                        <p class="text-black text-sm"><span class="line-through">89,99$</span>/ 79,99$</p>
+                        <a href="#" class="text-black text-sm font-bold">🛒 Add To Cart</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="pt-20">
+        <section id="review" class="h-screen flex items-center justify-center bg-pink-500">
+            <h1 class="text-4xl font-bold text-white">review</h1>
+        </section>
+    </div>
+    <div class="pt-20">
+        <section id="contact" class="h-screen flex items-center justify-center bg-pink-100">
+            <h1 class="text-4xl font-bold text-white">contact</h1>
+        </section>
+    </div>
+</body>
+
+</html>
