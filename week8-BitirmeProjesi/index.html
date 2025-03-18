@@ -10,6 +10,11 @@
 
 </head>
 <style>
+    html {
+        scroll-behavior: smooth;
+        /* Enable smooth scrolling */
+    }
+
     body {
         background-color: rgb(232, 246, 250);
         min-height: 100vh;
@@ -48,7 +53,7 @@
         /* Elemanları yatayda hizalar */
         text-align: left;
         /* Yazıları sola hizalar */
-        margin-left: 300px;
+        margin-left: 200px;
         /* Container'ı sola hizalar */
         height: 600px;
         /* Yüksekliği ayarlar */
@@ -127,9 +132,9 @@
         height: 100px;
     }
 
-    .container .our-classes {
-        margin-left: 330px;
-        margin-bottom: 380px;
+    .our-classes {
+        margin-left: 550px;
+        margin-bottom: 370px;
         /* Alt boşluğu ayarlar */
     }
 
@@ -149,16 +154,16 @@
         color: rgb(18, 18, 18);
         width: 600px;
         height: 20px;
-        margin-top: -370px;
+        margin-top: -350px;
         text-align: center;
-        margin-left: 130px;
+        margin-left: 340px;
     }
 
     .four-pic {
         width: 300px;
         height: 200px;
         margin-top: -270px;
-        margin-left: 600px;
+        margin-left: 700px;
     }
 
     .four {
@@ -168,22 +173,34 @@
         width: 600px;
         height: 200px;
         margin-top: 40px;
+        margin-left: 240px;
     }
 
     .tab-buttons {
-        margin-top: -230px;
-        justify-content: center;
-        align-items: center;
-        margin-right: 300px;
+        margin-top: -250px;
+        margin-right: -10px;
     }
 
     .classes2 {
-        height: 390px;
+        height: 360px;
         background-color: white;
+        margin-bottom: 50px;
+    }
+
+    .classes-baslik::after {
+        content: "";
+        display: block;
+        width: 40%;
+        height: 5px;
+        background-color: #f1b00c;
+        margin: 8px auto 0;
+        border-radius: 300px;
+        margin-right: 220px;
+        /* Yuvarlak köşeler ekler */
     }
 
     .classes-text {
-        margin-left: 80px;
+        margin-right: 300px;
         margin-bottom: 330px;
         height: 200px;
         width: 400px;
@@ -194,8 +211,8 @@
     .classes-img {
         height: 200px;
         width: 300px;
-        margin-top: -200px;
-        margin-left: 50px;
+        margin-top: -240px;
+        margin-left: 500px;
     }
 
     .types {
@@ -213,7 +230,7 @@
     }
 
     .trainer {
-        height: 65vh;
+        height: 80vh;
     }
 
     .trainer-pic {
@@ -228,7 +245,7 @@
         /* Kartlar arasına boşluk ekler */
         flex-wrap: wrap;
         /* Ekran daraldığında alt satıra geçer */
-        height: 80vh;
+        height: 60vh;
         /* Yüksekliği ayarlar */
     }
 
@@ -236,6 +253,17 @@
         text-align: center;
         /* Yazıları ortalar */
         margin-bottom: 20px;
+    }
+
+    .trainer-baslik::after {
+        content: "";
+        display: block;
+        width: 30%;
+        height: 5px;
+        background-color: #f1b00c;
+        margin: 8px auto 0;
+        border-radius: 300px;
+        /* Yuvarlak köşeler ekler */
     }
 
     .trainer-sentence {
@@ -285,16 +313,26 @@
 
     .buy {
         width: 750px;
-        margin-bottom: 300px;
+        margin-bottom: 355px;
         text-align: center;
-        height: 400px;
+        height: 355px;
         justify-content: center;
         align-items: center;
-
     }
 
     .trainer-baslik2 {
         margin-bottom: 20px;
+    }
+
+    .trainer-baslik2::after {
+        content: "";
+        display: block;
+        width: 30%;
+        height: 5px;
+        background-color: #f1b00c;
+        margin: 8px auto 0;
+        border-radius: 300px;
+        /* Yuvarlak köşeler ekler */
     }
 
     .trainer-img2 {
@@ -304,6 +342,212 @@
 
     .trainers {
         background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
+    }
+
+    .review-g {
+        height: 45vh;
+        background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
+
+    }
+
+    .review-a {
+        margin-bottom: 470px;
+    }
+
+    .review-baslik {
+        text-align: center;
+        margin-bottom: 20px;
+        color: rgb(49, 49, 122);
+    }
+
+    .review-baslik::after {
+        content: "";
+        display: block;
+        width: 10%;
+        height: 5px;
+        background-color: #f1b00c;
+        margin: 8px auto 0;
+        border-radius: 300px;
+        /* Yuvarlak köşeler ekler */
+    }
+
+    .review-p {
+        text-align: center;
+        width: 800px;
+        margin: 0 auto;
+        /* Yatayda ortalar */
+        font-weight: 500;
+    }
+
+    .reviews {
+        /* Yorumlar */
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 30px;
+    }
+
+    .review {
+        /* Yorum */
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        border-radius: 10px;
+        width: 40%;
+        position: relative;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+
+    .review img {
+        width: 60px;
+        height: 50px;
+        border-radius: 60%;
+        margin-right: 15px;
+        margin-bottom: 100px;
+    }
+
+    .review-text {
+        /* İsim ve yorum */
+        text-align: left;
+    }
+
+    .review-text h3 {
+        /*isim*/
+        margin: 0;
+        font-size: 18px;
+        color: #090909;
+    }
+
+    .title {
+        /* Ünvan */
+        font-size: 14px;
+        color: #7f8c8d;
+        margin-bottom: 10px;
+    }
+
+    .bubble {
+        /* Yorum */
+        background-color: #2670bf;
+        color: white;
+        padding: 15px;
+        border-radius: 30px;
+        position: relative;
+        /* Görsel ve isim aynı konumda olacak */
+        margin-top: -5px;
+        box-shadow: 0 10px 5px rgba(10, 10, 10, 0.1);
+    }
+
+
+    .contact-ust {
+        text-align: center;
+        position: absolute;
+        /* Pozisyonu ayarlar */
+        margin-bottom: 600px;
+    }
+
+    .contact-baslik::after {
+        content: "";
+        display: block;
+        width: 15%;
+        height: 5px;
+        background-color: #f1b00c;
+        margin: 8px auto 0;
+        border-radius: 300px;
+        /* Yuvarlak köşeler ekler */
+    }
+
+    .contact-form {
+        margin-bottom: -30px;
+        text-align: center;
+    }
+
+    .contact-form .forms {
+        margin-bottom: 10px;
+        width: 400px;
+        height: 40px;
+        text-align: center;
+        background-color: #ffffff;
+        text-align: center;
+    }
+
+    .contact .button {
+        padding: 5px 60px;
+        border: #577b7e solid 1px;
+        background-color: #4b6494;
+        /* Butonun iç boşluğunu ayarlar */
+    }
+
+    .contact-baslik {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #255283;
+    }
+
+    .contact-sentence {
+        text-align: center;
+        width: 800px;
+        margin: 0 auto;
+        /* Yatayda ortalar */
+        font-weight: 500;
+    }
+
+    .footer {
+        background-color: #1f3b69;
+        color: white;
+        padding: 40px 0;
+        text-align: center;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer-logo img {
+        width: 200px;
+        height: 70px;
+        margin-right: 500px;
+    }
+
+    .footer-text {
+        max-width: 700px;
+        margin: 10px auto;
+        font-size: 16px;
+        color: #d0d9e8;
+        text-align: left;
+    }
+
+    .footer-links {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-top: 20px;
+    }
+
+    .column h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .column ul li {
+        margin: 5px;
+    }
+
+    .column ul li a {
+        text-decoration: none;
+        color: #d0d9e8;
+        font-size: 14px;
+    }
+
+    .column ul li a:hover {
+        color: #f1c40f;
     }
 </style>
 
@@ -471,7 +715,7 @@
     <div class="classes2">
         <section id="classes" class="h-screen flex items-center justify-center bg-white">
             <div class="classes-text font-bold">
-                <h3 class="text-3xl text-blue-900">BMI Calculator</h3> <br>
+                <h3 class="classes-baslik text-3xl text-blue-900">BMI Calculator</h3> <br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo non ratione quibusdam quaerat
                     aliquam commodi laudantium doloremque</p>
                 <p> <br>
@@ -480,8 +724,6 @@
                 </p> <br>
                 <input type="number" class="types shadow" placeholder="Your Height"> cm
                 <input type="number" class="types shadow" placeholder="Your Weight"> kg
-            </div>
-            <div>
                 <img src="./pht/bmi-index.jpg" alt="" class="classes-img shadow-lg rounded-lg">
             </div>
         </section>
@@ -559,15 +801,108 @@
             </div>
         </section>
     </div>
-    <div class="pt-20">
-        <section id="review" class="h-screen flex items-center justify-center bg-pink-500">
-            <h1 class="text-4xl font-bold text-white">review</h1>
+    <div class="pt-20 review-g">
+        <section id="review" class="review-g h-screen flex items-center justify-center bg-blue-100">
+            <div class="review-a">
+                <h2 class="review-baslik font-bold text-3xl">REVIEW CLIENT</h2>
+                <p class="review-p font-weight-bolder">Lorem Ipsum is not simply random text. It has roots in a
+                    piece of
+                    classical
+                    at
+                    Hampden-Sydney
+                    College.</p>
+                <div class="reviews">
+                    <div class="review">
+                        <img src="./pht/trainer1.jpg" alt="Diet Expert">
+                        <div class="review-text">
+                            <h3>Diet Expert</h3>
+                            <p class="title">CFO</p>
+                            <div class="bubble">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla, sequi quia, libero
+                                    voluptatibus
+                                    ducimus earum quidem minus eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <img src="./pht/trainer3.jpg" alt="Cardio Trainer">
+                        <div class="review-text">
+                            <h3>Cardio Trainer</h3>
+                            <p class="title">CEO</p>
+                            <div class="bubble">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla, sequi quia, libero
+                                    voluptatibus
+                                    ducimus earum quidem minus eveniet.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
+    <!-- First, remove the footer from the contact section -->
     <div class="pt-20">
-        <section id="contact" class="h-screen flex items-center justify-center bg-pink-100">
-            <h1 class="text-4xl font-bold text-white">contact</h1>
+        <section id="contact" class="contact h-screen flex items-center justify-center bg-white">
+            <div class="contact-ust">
+                <h1 class="contact-baslik text-3xl font-bold">CONTACT US</h1>
+                <p class="contact-sentence font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo
+                    non ratione
+                    quibusdam quaerat aliquam commodi laudantium doloremque</p>
+            </div>
+            <div class="w-1/2 contact-form">
+                <form action="">
+                    <p class="font-bold">Mobile Number: +90 522 444 53 23</p> <br>
+                    <p class="font-bold">Email Address: ilydatass@gmail.com</p> <br>
+                    <p class="font-bold text-xl">Make An Appoinment</p> <br>
+                    <input type="text" class="forms types shadow-lg" placeholder="Your Name"> <br>
+                    <input type="email" class="forms types shadow-lg" placeholder="Your Email"> <br>
+                    <textarea name="message" id="message" cols="30" rows="10"
+                        class="forms types shadow-lg">Your Message</textarea> <br>
+                    <button class="button buttons joinus hover:text-gray-300 font-bold rounded-sm">Send</button>
+                </form>
+            </div>
+            <div class="contact-map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.073366073073!2d28.97807331568268!3d41.00865707930169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba1b1b1b1b1b%3A0x7b1b1b1b1b1b1b1b!2sKad%C4%B1k%C3%B6y%20Belediyesi!5e0!3m2!1str!2str!4v1623683660731!5m2!1str!2str"
+                    width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+                    class="rounded-lg"></iframe>
+            </div>
         </section>
+    </div>
+
+    <!-- Then add the footer outside of any section, at the end of the body -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./pht/logo.png" alt="Logo">
+            </div>
+            <p class="footer-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repudiandae iure doloribus et beatae nihil
+                vero nesciunt corporis? Nobis ut ipsam unde doloremque, corporis nostrum.
+            </p>
+            <div class="footer-links">
+                <div class="column">
+                    <h3>Information</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Classes</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h3>Helpful Links</h3>
+                    <ul>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Supports</a></li>
+                        <li><a href="#">Terms & Condition</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </section>
     </div>
 </body>
 
