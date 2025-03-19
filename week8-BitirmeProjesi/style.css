@@ -1,0 +1,1098 @@
+html {
+    scroll-behavior: smooth;
+    /* Enable smooth scrolling */
+}
+
+body {
+    background-color: white;
+    min-height: 100vh;
+    /* Ekranın tamamını kaplar */
+    margin: 0;
+    /* Sayfanın kenar boşluklarını sıfırlar */
+}
+
+.stars {
+    background-image: url('./pht/hero-man.jpg');
+    /* Arka plan resmi ekler */
+    height: 92vh;
+    /* Yükseklik */
+    background-size: cover;
+    /* Resmi kaplar */
+    background-position: center;
+    /* Resmi merkezler */
+    position: relative;
+    /* Pozisyonu ayarlar */
+    background-repeat: no-repeat;
+    /* Resmi tekrar etmez */
+    margin-bottom: 95px;
+}
+
+.joinus {
+    padding: 3px 5px;
+    /* Butonun iç boşluğunu ayarlar */
+    color: rgb(255, 255, 255);
+    /* Yazı rengini ayarlar */
+}
+
+.container {
+    align-items: center;
+    /* Elemanları dikeyde hizalar */
+    justify-content: center;
+    /* Elemanları yatayda hizalar */
+    text-align: left;
+    /* Yazıları sola hizalar */
+    margin-left: 200px;
+    /* Container'ı sola hizalar */
+    height: 600px;
+    /* Yüksekliği ayarlar */
+    margin-bottom: 20px;
+    /* Alt boşluğu ayarlar */
+}
+
+.home {
+    align-items: center;
+    /* Elemanları dikeyde hizalar */
+    justify-content: center;
+    /* Elemanları yatayda hizalar */
+    margin-left: 100px;
+    /* Yazıları sola hizalar */
+    height: 600px;
+    /* Yüksekliği ayarlar */
+}
+
+.home-baslik {
+    padding: 3px 5px;
+    /* Başlık iç boşluğunu ayarlar */
+}
+
+.home-baslik2 {
+    padding: 3px 5px;
+    /* Başlık iç boşluğunu ayarlar */
+}
+
+.home-sentence {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    width: 900px;
+    /* Yazı genişliğini ayarlar */
+    height: 140px;
+    /* Yazı yüksekliğini ayarlar */
+}
+
+.home-button {
+    padding: 10px 20px;
+    /* Butonun iç boşluğunu ayarlar */
+}
+
+.home-button2 {
+    padding: 10px 20px;
+    /* Butonun iç boşluğunu ayarlar */
+    margin-left: 40px;
+    /* Butonu sola hizalar */
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.box {
+    display: flex;
+    /* Flexbox kullanır. flexbox amacı elemanları hizalamak ve aralarındaki boşlukları ayarlamaktır */
+    justify-content: center;
+    /* Elemanları yatayda hizalar */
+    align-items: center;
+    /* Elemanları dikeyde hizalar */
+    gap: 20px;
+    /* Elemanlar arasındaki boşluğu ayarlar */
+    padding: 5px;
+    /* Box'ın iç boşluğunu ayarlar */
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: bold;
+    position: absolute;
+    /* Pozisyonu ayarlar. absolute ile stars div'inin içinde konumlandırır */
+    top: 650px;
+    /* Üst boşluğu ayarlar */
+}
+
+.boxs {
+    padding: 20px;
+    /* Box'ın iç boşluğunu ayarlar */
+    text-align: center;
+    /* Yazıları ortalar */
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 175px;
+    height: 100px;
+}
+
+/* Classes section styles - Küçültülmüş */
+.classes {
+    background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
+    padding: 30px 15px;
+    /* Padding'i azalttım */
+    min-height: 60vh;
+    /* Minimum yüksekliği azalttım */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.classes-container {
+    max-width: 1000px;
+    /* Genişliği azalttım */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.classes-baslik {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    /* Başlık boyutunu küçülttüm */
+    font-weight: bold;
+    margin-bottom: 15px;
+    /* Alt boşluğu azalttım */
+    position: relative;
+}
+
+.classes-baslik::after {
+    content: "";
+    display: block;
+    width: 60px;
+    /* Genişliği azalttım */
+    height: 3px;
+    /* Yüksekliği azalttım */
+    background-color: #f1b00c;
+    margin: 10px auto 0;
+    /* Üst boşluğu azalttım */
+    border-radius: 300px;
+}
+
+.classes-sentence {
+    text-align: center;
+    max-width: 500px;
+    /* Genişliği azalttım */
+    margin: 0 auto 25px;
+    /* Alt boşluğu azalttım */
+    color: #4b5563;
+    font-size: 0.9rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+/* Tab buttons */
+.classes-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    /* Boşluğu azalttım */
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+    /* Alt boşluğu azalttım */
+}
+
+.classes-button {
+    padding: 8px 16px;
+    /* Buton boyutunu küçülttüm */
+    background-color: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    /* Köşe yuvarlaklığını azalttım */
+    font-weight: 600;
+    font-size: 0.9rem;
+    /* Yazı boyutunu küçülttüm */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.classes-button:hover,
+.classes-button.active {
+    background-color: #f1b00c;
+    transform: translateY(-1px);
+    /* Hover efektini azalttım */
+}
+
+/* Tab content */
+.classes-four {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    /* İç boşluğu azalttım */
+    border-radius: 8px;
+    /* Köşe yuvarlaklığını azalttım */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    /* Gölgeyi azalttım */
+    margin: 0 auto;
+    max-width: 700px;
+    /* Genişliği azalttım */
+    position: relative;
+}
+
+.classes-four h3 {
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    /* Alt boşluğu azalttım */
+    font-size: 1.5rem;
+    /* Başlık boyutunu küçülttüm */
+}
+
+.classes-four p {
+    color: #4b5563;
+    line-height: 1.5;
+    /* Satır yüksekliğini azalttım */
+    margin-bottom: 15px;
+    /* Alt boşluğu azalttım */
+    font-size: 0.9rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+.classes-pic {
+    width: 100%;
+    max-width: 300px;
+    /* Resim boyutunu küçülttüm */
+    height: auto;
+    border-radius: 8px;
+    /* Köşe yuvarlaklığını azalttım */
+    margin: 15px auto 0;
+    /* Üst boşluğu azalttım */
+    display: block;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+    /* Gölgeyi azalttım */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .classes {
+        padding: 25px 10px;
+        /* Padding'i daha da azalttım */
+    }
+
+    .classes-baslik {
+        font-size: 1.3rem;
+        /* Başlık boyutunu daha da küçülttüm */
+    }
+
+    .classes-button {
+        padding: 6px 12px;
+        /* Buton boyutunu daha da küçülttüm */
+        font-size: 0.8rem;
+        /* Yazı boyutunu daha da küçülttüm */
+    }
+
+    .classes-four {
+        padding: 15px;
+        /* İç boşluğu daha da azalttım */
+    }
+
+    .classes-four h3 {
+        font-size: 1.3rem;
+        /* Başlık boyutunu daha da küçülttüm */
+    }
+}
+
+@media (min-width: 1024px) {
+    .classes-four {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        /* Sütun oranını azalttım */
+        gap: 20px;
+        /* Boşluğu azalttım */
+        align-items: center;
+    }
+
+    .classes-pic {
+        margin: 0;
+        grid-column: 2;
+        grid-row: 1 / span 4;
+        max-width: 250px;
+        /* Resim boyutunu daha da küçülttüm */
+    }
+}
+
+/* classes bitiş */
+
+/* classesalt başlangıç - Küçültülmüş stiller */
+.classesalt {
+    background-color: white;
+    padding: 20px 20px 30px;
+    /* Padding'i azalttım */
+    margin-bottom: 20px;
+    /* Alt boşluğu azalttım */
+    min-height: 30vh;
+    /* Minimum yüksekliği azalttım */
+}
+
+.classesalt-baslik {
+    font-size: 1.5rem;
+    /* Başlık boyutunu küçülttüm */
+    color: #1e3a8a;
+    margin-bottom: 10px;
+    /* Alt boşluğu azalttım */
+}
+
+.classesalt-sentence {
+    margin-bottom: 15px;
+    /* Alt boşluğu azalttım */
+    color: #4b5563;
+    line-height: 1.4;
+    /* Satır yüksekliğini azalttım */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.9rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+.classesalt-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    /* Genişliği azalttım */
+    margin: 0 auto;
+}
+
+.types {
+    width: 100%;
+    max-width: 180px;
+    /* Genişliği azalttım */
+    height: 35px;
+    /* Yüksekliği azalttım */
+    border: 1px solid #ccc;
+    font-weight: 100;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    /* Alt boşluğu azalttım */
+    text-align: center;
+    border-radius: 4px;
+}
+
+.classesalt-img {
+    width: 100%;
+    max-width: 280px;
+    /* Resim boyutunu küçülttüm */
+    height: auto;
+    margin-top: 15px;
+    /* Üst boşluğu azalttım */
+    display: block;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Result container styling */
+#result-container {
+    width: 100%;
+    max-width: 280px;
+    /* Genişliği azalttım */
+    margin: 15px auto;
+    /* Boşlukları azalttım */
+    padding: 10px;
+    /* İç boşluğu azalttım */
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+#bmi-result {
+    margin-bottom: 5px;
+    /* Alt boşluğu azalttım */
+    font-size: 1rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+#bmi-category {
+    font-size: 0.9rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+/* Calculate butonu için stil */
+#calculate-bmi {
+    padding: 8px 16px;
+    /* Buton boyutunu küçülttüm */
+    font-size: 0.9rem;
+    /* Yazı boyutunu küçülttüm */
+    max-width: 180px;
+    /* Genişliği azalttım */
+}
+
+/* Trainer section styles - Küçültülmüş */
+.trainer {
+    padding: 25px 15px;
+    /* Padding'i azalttım */
+    min-height: 40vh;
+    /* Minimum yüksekliği azalttım */
+    background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
+}
+
+.trainer-container {
+    max-width: 900px;
+    /* Genişliği azalttım */
+    margin: 0 auto;
+    padding: 10px;
+    /* İç boşluğu azalttım */
+}
+
+.trainer-baslik {
+    text-align: center;
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    /* Başlık boyutunu küçülttüm */
+    margin-bottom: 15px;
+    /* Alt boşluğu azalttım */
+    position: relative;
+}
+
+.trainer-baslik::after {
+    content: "";
+    display: block;
+    width: 50px;
+    /* Genişliği azalttım */
+    height: 3px;
+    background-color: #f1b00c;
+    margin: 8px auto 0;
+    /* Üst boşluğu azalttım */
+    border-radius: 300px;
+}
+
+.trainer-sentence {
+    text-align: center;
+    max-width: 600px;
+    /* Genişliği azalttım */
+    margin: 0 auto 20px;
+    /* Alt boşluğu azalttım */
+    color: #4b5563;
+    line-height: 1.3;
+    /* Satır yüksekliğini azalttım */
+    font-size: 0.85rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+.trainer-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    /* Sütun genişliğini azalttım */
+    gap: 15px;
+    /* Boşluğu azalttım */
+    padding: 5px 0;
+    /* İç boşluğu azalttım */
+}
+
+.trainer-card {
+    position: relative;
+    border-radius: 8px;
+    /* Köşe yuvarlaklığını azalttım */
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Gölgeyi azalttım */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    height: 200px;
+    /* Yüksekliği sabitledim */
+}
+
+.trainer-card:hover {
+    transform: translateY(-2px);
+    /* Hover efektini azalttım */
+}
+
+.trainer-img {
+    width: 100%;
+    height: 100%;
+    /* Yüksekliği ayarladım */
+    object-fit: cover;
+}
+
+.trainer-name {
+    position: absolute;
+    width: 100%;
+    /* Genişliği düzelttim */
+    height: 100%;
+    /* Yüksekliği düzelttim */
+    margin-top: 0;
+    /* Üst boşluğu kaldırdım */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px;
+    /* İç boşluğu azalttım */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.trainer-card:hover .trainer-name {
+    opacity: 1;
+}
+
+.trainer-name h3 {
+    color: white;
+    font-size: 1.1rem;
+    /* Yazı boyutunu küçülttüm */
+    margin-bottom: 3px;
+    /* Alt boşluğu azalttım */
+}
+
+.trainer-name span {
+    color: #f1b00c;
+    font-size: 0.8rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .trainer {
+        padding: 20px 10px;
+        /* Padding'i daha da azalttım */
+    }
+
+    .trainer-baslik {
+        font-size: 1.3rem;
+        /* Başlık boyutunu daha da küçülttüm */
+    }
+
+    .trainer-sentence {
+        font-size: 0.8rem;
+        /* Yazı boyutunu daha da küçülttüm */
+        padding: 0 10px;
+    }
+
+    .trainer-cards {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* Sütun genişliğini daha da azalttım */
+        gap: 10px;
+        /* Boşluğu daha da azalttım */
+    }
+
+    .trainer-card {
+        height: 180px;
+        /* Yüksekliği daha da azalttım */
+    }
+}
+
+/* Buy section styles */
+/* Buy section styles - Küçültülmüş stiller */
+.buy {
+    padding: 25px 15px;
+    /* Padding'i azalttım */
+    background-color: #f8f8f8;
+    text-align: center;
+    margin-bottom: 15px;
+    /* Alt boşluğu azalttım */
+}
+
+.buy h1 {
+    color: #1e3a8a;
+    font-size: 1.5rem;
+    /* Başlık boyutunu küçülttüm */
+    margin-bottom: 10px;
+    /* Alt boşluğu azalttım */
+}
+
+.buy p {
+    color: #4b5563;
+    font-size: 0.8rem;
+    /* Yazı boyutunu küçülttüm */
+    margin-bottom: 15px;
+    /* Alt boşluğu azalttım */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    /* Sütun genişliğini azalttım */
+    gap: 15px;
+    /* Boşlukları azalttım */
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 8px;
+    /* Köşe yuvarlaklığını azalttım */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Gölgeyi azalttım */
+    padding: 10px;
+    /* İç boşluğu azalttım */
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-2px);
+    /* Hover efektini azalttım */
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    /* Köşe yuvarlaklığını azalttım */
+    margin-bottom: 8px;
+    /* Alt boşluğu azalttım */
+}
+
+.product-card p {
+    color: #333;
+    font-size: 0.8rem;
+    /* Yazı boyutunu küçülttüm */
+    margin: 3px 0;
+    /* Boşlukları azalttım */
+}
+
+.product-card a {
+    color: #1e3a8a;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 5px;
+    /* Üst boşluğu azalttım */
+    font-size: 0.75rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+.product-card a:hover {
+    color: #f1b00c;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .trainer {
+        padding: 30px 15px;
+    }
+
+    .trainer-baslik {
+        font-size: 1.5rem;
+    }
+
+    .trainer-sentence {
+        font-size: 0.8rem;
+        padding: 0 10px;
+    }
+
+    .trainer-cards {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 15px;
+    }
+
+    .buy {
+        padding: 30px 15px;
+    }
+
+    .buy h1 {
+        font-size: 1.5rem;
+    }
+
+    .buy p {
+        font-size: 0.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Trainer bitiş */
+
+/* Review section styles - Küçültülmüş ve düzenlenmiş */
+.review-g {
+    height: auto;
+    /* Sabit yükseklik yerine içeriğe göre ayarlanacak */
+    min-height: 40vh;
+    /* Minimum yükseklik */
+    padding: 30px 15px;
+    /* İç boşluk ekledim */
+    background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
+
+}
+
+.review-a {
+    margin-bottom: 0;
+    /* Büyük alt boşluğu kaldırdım */
+    padding: 20px 0;
+}
+
+.review-baslik {
+    text-align: center;
+    margin-bottom: 15px;
+    /* Alt boşluğu azalttım */
+    color: rgb(49, 49, 122);
+    font-size: 1.5rem;
+    /* Başlık boyutunu küçülttüm */
+}
+
+.review-baslik::after {
+    content: "";
+    display: block;
+    width: 60px;
+    /* Genişliği piksel olarak belirttim */
+    height: 3px;
+    /* Yüksekliği azalttım */
+    background-color: #f1b00c;
+    margin: 8px auto 0;
+    border-radius: 300px;
+    /* Yuvarlak köşeler ekler */
+}
+
+.review-p {
+    text-align: center;
+    width: 90%;
+    /* Genişliği yüzde olarak belirttim */
+    max-width: 600px;
+    /* Maksimum genişlik ekledim */
+    margin: 0 auto 20px;
+    /* Alt boşluğu azalttım */
+    font-weight: 500;
+    font-size: 0.9rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+.reviews {
+    /* Yorumlar */
+    display: flex;
+    flex-direction: row;
+    /* Mobil görünümde alt alta gelecek */
+    flex-wrap: wrap;
+    /* Sığmazsa alt satıra geçecek */
+    justify-content: center;
+    gap: 20px;
+    /* Boşluğu azalttım */
+    margin-top: 20px;
+    /* Üst boşluğu azalttım */
+}
+
+.review {
+    /* Yorum */
+    display: flex;
+    align-items: flex-start;
+    /* Üstten hizalama */
+    padding: 15px;
+    /* İç boşluğu azalttım */
+    border-radius: 8px;
+    /* Köşe yuvarlaklığını azalttım */
+    width: 100%;
+    /* Mobil için tam genişlik */
+    max-width: 350px;
+    /* Maksimum genişlik */
+    position: relative;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.review img {
+    width: 50px;
+    /* Genişliği azalttım */
+    height: 50px;
+    /* Yüksekliği azalttım */
+    border-radius: 50%;
+    /* Tam yuvarlak */
+    margin-right: 10px;
+    /* Sağ boşluğu azalttım */
+    margin-bottom: 0;
+    /* Alt boşluğu kaldırdım */
+}
+
+.review-text {
+    flex: 1;
+    /* Kalan alanı doldursun */
+}
+
+.review-text h3 {
+    /*isim*/
+    margin: 0;
+    font-size: 16px;
+    /* Yazı boyutunu küçülttüm */
+    color: #090909;
+}
+
+.title {
+    font-size: 12px;
+    /* Yazı boyutunu küçülttüm */
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    /* Alt boşluğu azalttım */
+}
+
+.bubble {
+    /* Yorum */
+    background-color: #2670bf;
+    color: white;
+    padding: 12px;
+    /* İç boşluğu azalttım */
+    border-radius: 15px;
+    /* Köşe yuvarlaklığını azalttım */
+    position: relative;
+    margin-top: 5px;
+    /* Üst boşluğu ayarladım */
+    box-shadow: 0 4px 3px rgba(10, 10, 10, 0.1);
+    /* Gölgeyi azalttım */
+    font-size: 0.85rem;
+    /* Yazı boyutunu küçülttüm */
+}
+
+/* Responsive düzenlemeler */
+@media (max-width: 768px) {
+    .review-p {
+        width: 95%;
+        font-size: 0.8rem;
+    }
+
+    .reviews {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .review {
+        width: 90%;
+    }
+}
+
+
+/* Contact section styles - Düzenlenmiş */
+.contact {
+    padding: 40px 20px;
+    background-color: white;
+    min-height: 60vh;
+    /* Yüksekliği azalttım */
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.contact-ust {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.contact-baslik {
+    font-size: 1.75rem;
+    color: #255283;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-baslik::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #f1b00c;
+    margin: 8px auto 0;
+    border-radius: 300px;
+}
+
+.contact-sentence {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    color: #4b5563;
+}
+
+.contact-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    width: 100%;
+}
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+    color: #4b5563;
+}
+
+.forms {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #e5e7eb;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+textarea.forms {
+    height: 120px;
+    resize: vertical;
+}
+
+.contact-button {
+    background-color: #1e3a8a;
+    color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-button:hover {
+    background-color: #1e40af;
+}
+
+.contact-map {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+}
+
+.contact-map iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contact {
+        padding: 30px 15px;
+    }
+
+    .contact-baslik {
+        font-size: 1.5rem;
+    }
+
+    .contact-sentence {
+        font-size: 0.85rem;
+        padding: 0 15px;
+    }
+
+    .contact-content {
+        flex-direction: column;
+    }
+
+    .contact-form,
+    .contact-map {
+        max-width: 100%;
+    }
+}
+
+/* Footer styles - Düzenlenmiş */
+.footer {
+    background-color: #1f3b69;
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.footer-logo img {
+    width: 150px;
+    height: auto;
+    max-height: 60px;
+}
+
+.footer-text {
+    max-width: 600px;
+    margin: 0 auto 20px;
+    font-size: 14px;
+    color: #d0d9e8;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.column {
+    min-width: 120px;
+    text-align: left;
+}
+
+.column h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.column ul li {
+    margin: 5px 0;
+}
+
+.column ul li a {
+    text-decoration: none;
+    color: #d0d9e8;
+    font-size: 13px;
+    transition: color 0.2s;
+}
+
+.column ul li a:hover {
+    color: #f1c40f;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .footer {
+        padding: 25px 10px;
+    }
+
+    .footer-logo img {
+        width: 120px;
+    }
+
+    .footer-text {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+
+    .footer-links {
+        gap: 20px;
+    }
+
+    .column h3 {
+        font-size: 14px;
+    }
+
+    .column ul li a {
+        font-size: 12px;
+    }
+}
