@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const buttons = document.querySelectorAll(".tab-button");
+    const buttons = document.querySelectorAll(".classes-buttons button");
     const contents = document.querySelectorAll(".tab-content");
 
     buttons.forEach(button => {
@@ -37,18 +37,3 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-// Keep this function for backward compatibility, but we'll use event listeners above
-function showName(element) {
-    // Find the trainer-name div inside the clicked element
-    const trainerName = element.querySelector('.trainer-name');
-
-    // Toggle between hidden and show classes
-    if (trainerName.classList.contains('hidden')) {
-        trainerName.classList.remove('hidden');
-        trainerName.classList.add('show');
-    } else {
-        trainerName.classList.add('hidden');
-        trainerName.classList.remove('show');
-    }
-}

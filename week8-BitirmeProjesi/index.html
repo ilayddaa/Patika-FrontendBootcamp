@@ -61,12 +61,28 @@
         /* Alt boşluğu ayarlar */
     }
 
-    .baslik {
+    .home {
+        align-items: center;
+        /* Elemanları dikeyde hizalar */
+        justify-content: center;
+        /* Elemanları yatayda hizalar */
+        margin-left: 100px;
+        /* Yazıları sola hizalar */
+        height: 600px;
+        /* Yüksekliği ayarlar */
+    }
+
+    .home-baslik {
         padding: 3px 5px;
         /* Başlık iç boşluğunu ayarlar */
     }
 
-    .yazi {
+    .home-baslik2 {
+        padding: 3px 5px;
+        /* Başlık iç boşluğunu ayarlar */
+    }
+
+    .home-sentence {
         font-size: 20px;
         color: rgb(255, 255, 255);
         width: 900px;
@@ -75,31 +91,17 @@
         /* Yazı yüksekliğini ayarlar */
     }
 
-    .container .buttons {
+    .home-button {
         padding: 10px 20px;
         /* Butonun iç boşluğunu ayarlar */
     }
 
-    .container .buttons2 {
+    .home-button2 {
         padding: 10px 20px;
         /* Butonun iç boşluğunu ayarlar */
         margin-left: 40px;
         /* Butonu sola hizalar */
         border: 1px solid rgb(255, 255, 255);
-    }
-
-    /* Düzeltilmiş box stili */
-    .box-container {
-        position: absolute;
-        /* Pozisyonu ayarlar. absolute ile stars div'inin içinde konumlandırır */
-        top: 710px;
-        /* Üst boşluğu ayarlar */
-        left: 0;
-        /* Sol boşluğu ayarlar */
-        right: 0;
-        /* Sağ boşluğu ayarlar */
-        width: 100%;
-        /* Genişliği ayarlar */
     }
 
     .box {
@@ -116,6 +118,10 @@
         color: rgb(255, 255, 255);
         font-size: 50px;
         font-weight: bold;
+        position: absolute;
+        /* Pozisyonu ayarlar. absolute ile stars div'inin içinde konumlandırır */
+        top: 710px;
+        /* Üst boşluğu ayarlar */
     }
 
     .boxs {
@@ -132,71 +138,152 @@
         height: 100px;
     }
 
-    .our-classes {
-        margin-left: 550px;
-        margin-bottom: 370px;
-        /* Alt boşluğu ayarlar */
-    }
-
-    .container .our-classes::after {
-        content: "";
-        display: block;
-        width: 50%;
-        height: 5px;
-        background-color: #f1b00c;
-        margin: 8px auto 0;
-        border-radius: 300px;
-        /* Yuvarlak köşeler ekler */
-    }
-
-    .container .classes-text {
-        font-size: 18px;
-        color: rgb(18, 18, 18);
-        width: 600px;
-        height: 20px;
-        margin-top: -350px;
-        text-align: center;
-        margin-left: 340px;
-    }
-
-    .four-pic {
-        width: 300px;
-        height: 200px;
-        margin-top: -270px;
-        margin-left: 700px;
-    }
-
-    .four {
-        justify-content: center;
+    /* Classes section styles */
+    .classes {
+        background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
+        padding: 60px 20px;
+        min-height: 100vh;
+        display: flex;
         align-items: center;
-        text-align: left;
-        width: 600px;
-        height: 200px;
-        margin-top: 40px;
-        margin-left: 240px;
+        justify-content: center;
     }
 
-    .tab-buttons {
-        margin-top: -250px;
-        margin-right: -10px;
+    .classes-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%;
     }
 
-    .classes2 {
-        height: 360px;
-        background-color: white;
-        margin-bottom: 50px;
+    .classes-baslik {
+        text-align: center;
+        color: #1e3a8a;
+        font-size: 2rem;
+        /* 32px */
+        font-weight: bold;
+        margin-bottom: 20px;
+        position: relative;
     }
 
     .classes-baslik::after {
         content: "";
         display: block;
-        width: 40%;
-        height: 5px;
+        width: 80px;
+        height: 4px;
         background-color: #f1b00c;
-        margin: 8px auto 0;
+        margin: 15px auto 0;
         border-radius: 300px;
-        margin-right: 220px;
-        /* Yuvarlak köşeler ekler */
+    }
+
+    .classes-sentence {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 40px;
+        /* 0 top, auto right-left, 40px bottom */
+        color: #4b5563;
+    }
+
+    /* Tab buttons */
+    .classes-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+        /* Butonlar alt alta sıralanır */
+        margin-bottom: 40px;
+    }
+
+    .classes-button {
+        padding: 12px 24px;
+        background-color: #1e3a8a;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+
+    .classes-button:hover,
+    /* Üzerine gelince */
+    .classes-button.active {
+        background-color: #f1b00c;
+        transform: translateY(-2px);
+        /* Butonu yukarı doğru hareket ettirir */
+    }
+
+    /* Tab content */
+    .classes-four {
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        max-width: 800px;
+        position: relative;
+    }
+
+    .classes-four h3 {
+        color: #1e3a8a;
+        margin-bottom: 20px;
+    }
+
+    .classes-four p {
+        color: #4b5563;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .classes-pic {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        border-radius: 12px;
+        margin: 20px auto 0;
+        display: block;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+        .classes {
+            padding: 40px 15px;
+        }
+
+        .classes-baslik {
+            font-size: 1.75rem;
+        }
+
+        .classes-button {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
+
+        .classes-four {
+            padding: 20px;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .classes-four {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .classes-pic {
+            margin: 0;
+            grid-column: 2;
+            grid-row: 1 / span 4;
+        }
+    }
+
+    /* classes bitiş */
+
+    .classes2 {
+        height: 360px;
+        background-color: white;
+        margin-bottom: 50px;
     }
 
     .classes-text {
@@ -222,11 +309,6 @@
         font-weight: 100;
         font-family: 'Times New Roman', Times, serif;
         margin-left: 20px;
-    }
-
-    .classes {
-        background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
-        height: 95vh;
     }
 
     .trainer {
@@ -573,149 +655,92 @@
         <!-- Navbar Bitiş -->
         <div class="pt-20">
             <section id="home" class="h-screen flex items-center justify-center">
-                <div class="container">
-                    <h2 class="baslik text-xl font-bold text-white rounded bg-blue-900 inline-block">POWERFULL</h2>
-                    <h2 class="text-7xl font-bold text-white p-1">Group <br>
+                <div class="home">
+                    <h2 class="home-baslik text-xl font-bold text-white rounded bg-blue-900 inline-block">POWERFULL</h2>
+                    <h2 class="home-baslik2 text-7xl font-bold text-white p-1">Group <br>
                         Practice <br>
                         With Trainer
                     </h2> <br>
-                    <p class="yazi font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sequi
+                    <p class="home-sentence font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                        sequi
                         perspiciatis
                         error deserunt
                         delectus laudantium fuga accusantium voluptatum aspernatur molestiae! Quae nam ea doloremque
                         quia odit unde non voluptas consequatur. Lorem ipsum dolor sit amet consectetur adipisicing.
                     </p>
                     <button>
-                        <a href="#" class="buttons joinus hover:text-gray-300 font-bold rounded-sm bg-blue-900">Sign
+                        <a href="#"
+                            class="home-button buttons joinus hover:text-gray-300 font-bold rounded-sm bg-blue-900">Sign
                             Up</a>
                     </button>
                     <button>
-                        <a href="#" class="buttons2 joinus hover:text-gray-300 font-bold rounded-sm">Details</a>
+                        <a href="#" class="home-button2 joinus hover:text-gray-300 font-bold rounded-sm">Details</a>
                     </button>
                 </div>
                 <!-- Boxları ayrı bir container içine aldım ve stars div'inin içinde konumlandırdım -->
-                <div class="box-container">
-                    <div class="box">
-                        <div class="boxs">
-                            <p class="text-xl font-bold">405</p>
-                            <p class="font-bold text-blue-900">Work Out</p>
-                        </div>
-                        <div class="boxs">
-                            <p class="text-xl font-bold">405</p>
-                            <p class="font-bold text-blue-900">Work Out</p>
-                        </div>
-                        <div class="boxs">
-                            <p class="text-xl font-bold">305</p>
-                            <p class="font-bold text-blue-900">Working Hour</p>
-                        </div>
-                        <div class="boxs">
-                            <p class="text-xl font-bold">705</p>
-                            <p class="font-bold text-blue-900">Happy Client</p>
-                        </div>
+                <div class="box">
+                    <div class="boxs">
+                        <p class="text-xl font-bold">405</p>
+                        <p class="font-bold text-blue-900">Work Out</p>
+                    </div>
+                    <div class="boxs">
+                        <p class="text-xl font-bold">405</p>
+                        <p class="font-bold text-blue-900">Work Out</p>
+                    </div>
+                    <div class="boxs">
+                        <p class="text-xl font-bold">305</p>
+                        <p class="font-bold text-blue-900">Working Hour</p>
+                    </div>
+                    <div class="boxs">
+                        <p class="text-xl font-bold">705</p>
+                        <p class="font-bold text-blue-900">Happy Client</p>
                     </div>
                 </div>
             </section>
         </div>
     </div>
     <br> <br>
-    <div class="pt-5 classes">
-        <section id="classes" class="h-screen flex items-center justify-center">
-            <div class="container fixed-header align-items-center justify-content-center">
-                <h2 class="our-classes text-3xl font-bold text-center inline-block text-blue-900">
-                    OUR CLASSES</h2>
-                <p class="classes-text font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                    veritatis aliquam
-                    tempore iste
-                    temporibus veniam amet!
+    <div class="pt-5">
+        <section id="classes" class="classes">
+            <div class="classes-container">
+                <h2 class="classes-baslik">OUR CLASSES</h2>
+                <p class="classes-sentence font-bold">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                    veritatis aliquam tempore iste temporibus veniam amet!
                 </p>
                 <!-- Butonlar -->
-                <div class="tab-buttons flex justify-center space-x-4">
-                    <button
-                        class="tab-button bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300"
-                        data-tab="#">Yoga</button>
-                    <button
-                        class="tab-button bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300"
-                        data-tab="group">Group</button>
-                    <button
-                        class="tab-button bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300"
-                        data-tab="solo">Solo</button>
-                    <button
-                        class="tab-button bg-blue-900 text-white px-4 py-2 rounded hover:bg-yellow-600 transition duration-300"
-                        data-tab="stretching">Stretching</button>
+                <div class="classes-buttons">
+                    <button class="classes-button active" data-tab="#">Yoga</button>
+                    <button class="classes-button" data-tab="group">Group</button>
+                    <button class="classes-button" data-tab="solo">Solo</button>
+                    <button class="classes-button" data-tab="stretching">Stretching</button>
                 </div>
                 <!-- İçerikler -->
-                <div class="mt-6">
-                    <div id="#" class="four tab-content w-1/2 font-bold">
-                        <h3 class="text-3xl">Why are your Yoga?</h3> <br>
-                        <p>Yoga is great for mind and body balance. Lorem ipsum dolor sit amet consectetur adipisicing
+                <div class="tab-contents">
+                    <div id="#" class="classes-four tab-content">
+                        <h3 class="text-3xl font-bold">Why are your Yoga?</h3>
+                        <p>
+                            Yoga is great for mind and body balance. Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Ratione quam aliquid error, aspernatur cum mollitia, et atque accusantium officiis
                             voluptatem illum. Amet, aspernatur? Ratione praesentium minima explicabo, dignissimos
-                            accusamus ab!</p> <br>
-                        <h3 class="text-3xl font-bold">When comes Yoga Your Time?</h3> <br>
+                            accusamus ab!
+                        </p>
+                        <h3 class="text-3xl font-bold">When comes Yoga Your Time?</h3>
                         <p>
                             Saturday-Sunday: 8:00am - 10:00am <br>
                             Monday-Friday: 6:00pm - 8:00pm <br>
                             Tuesday-Saturday: 10:00am - 12:00pm
                         </p>
-                        <img src="./pht/yoga.jpg" alt="yoga" class="four-pic shadow-lg rounded-lg">
-                    </div>
-                    <div id="group" class="four tab-content hidden font-bold">
-                        <h3 class="text-3xl">Why are your Group Training?</h3> <br>
-                        <p>
-                            Perfect for those who like to train with others and have fun. Lorem ipsum dolor sit amet
-                            consectetur adipisicing elit. Architecto fugiat fuga inventore illo quam natus voluptatibus
-                            earum minus, sunt, recusandae magni distinctio cumque reprehenderit reiciendis laborum
-                            eveniet. Consectetur, recusandae minima?
-                        </p> <br>
-                        <h3 class="text-3xl font-bold">When comes Group Your Time?</h3> <br>
-                        <p>
-                            Friday-Sunday: 8:00am - 10:00am <br>
-                            Wednesday-Thursday: 6:00pm - 8:00pm <br>
-                            Tuesday-Monday: 10:00am - 12:00pm
-                        </p>
-                        <img src="./pht/group.webp" alt="group" class="four-pic shadow-lg rounded-lg">
-                    </div>
-                    <div id="solo" class="four tab-content hidden font-bold">
-                        <h3 class="text-3xl">Why are your Solo?</h3> <br>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto fugiat fuga inventore
-                            illo
-                            consectetur adipisicing elit. Architecto fugiat fuga inventore illo quam natus voluptatibus
-                            earum minus, sunt, recusandae magni distinctio cumque reprehenderit reiciendis laborum
-                            eveniet. Consectetur, recusandae minima?
-                        </p> <br>
-                        <h3 class="text-3xl font-bold">When comes Solo Your Time?</h3> <br>
-                        <p>
-                            Sunday-Monday: 8:00am - 10:00am <br>
-                            Tuesday-Thursday: 6:00pm - 8:00pm <br>
-                            Friday-Monday: 10:00am - 12:00pm
-                        </p>
-                        <img src="./pht/solo.jpg" alt="Solo" class="four-pic shadow-lg rounded-lg">
-                    </div>
-                    <div id="stretching" class="four tab-content hidden font-bold">
-                        <h3 class="text-3xl">Why are your Stretching?</h3> <br>
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Architecto fugiat fuga inventore illo quam natus voluptatibus
-                            earum minus, sunt, recusandae magni distinctio cumque reprehenderit reiciendis laborum
-                            eveniet. Consectetur, recusandae minima?
-                        </p> <br>
-                        <h3 class="text-3xl font-bold">When comes Stretching Your Time?</h3> <br>
-                        <p>
-                            Tuesday-Sunday: 8:00am - 10:00am <br>
-                            Friday-Thursday: 6:00pm - 8:00pm <br>
-                            Monday-Monday: 10:00am - 12:00pm
-                        </p>
-                        <img src="./pht/stret.webp" alt="Stret" class="four-pic shadow-lg rounded-lg">
+                        <img src="./pht/yoga.jpg" alt="yoga" class="classes-pic">
                     </div>
                 </div>
             </div>
         </section>
     </div>
     <div class="classes2">
-        <section id="classes" class="h-screen flex items-center justify-center bg-white">
-            <div class="classes-text font-bold">
-                <h3 class="classes-baslik text-3xl text-blue-900">BMI Calculator</h3> <br>
+        <section id="classes" class="classes2 h-screen flex items-center justify-center bg-white">
+            <div class="classes2-sentence font-bold">
+                <h3 class="classes2-baslik text-3xl text-blue-900">BMI Calculator</h3> <br>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo non ratione quibusdam quaerat
                     aliquam commodi laudantium doloremque</p>
                 <p> <br>
