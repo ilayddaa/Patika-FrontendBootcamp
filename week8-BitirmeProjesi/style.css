@@ -13,110 +13,97 @@ body {
 
 .stars {
     background-image: url('./pht/hero-man.jpg');
-    /* Arka plan resmi ekler */
     height: 92vh;
-    /* Yükseklik */
     background-size: cover;
-    /* Resmi kaplar */
     background-position: center;
-    /* Resmi merkezler */
     position: relative;
-    /* Pozisyonu ayarlar */
     background-repeat: no-repeat;
-    /* Resmi tekrar etmez */
     margin-bottom: 95px;
-}
-
-.joinus {
-    padding: 3px 5px;
-    /* Butonun iç boşluğunu ayarlar */
-    color: rgb(255, 255, 255);
-    /* Yazı rengini ayarlar */
-}
-
-.container {
-    align-items: center;
-    /* Elemanları dikeyde hizalar */
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    /* Elemanları yatayda hizalar */
-    text-align: left;
-    /* Yazıları sola hizalar */
-    margin-left: 200px;
-    /* Container'ı sola hizalar */
-    height: 600px;
-    /* Yüksekliği ayarlar */
-    margin-bottom: 20px;
-    /* Alt boşluğu ayarlar */
 }
 
 .home {
-    align-items: center;
-    /* Elemanları dikeyde hizalar */
+    align-items: flex-start;
     justify-content: center;
-    /* Elemanları yatayda hizalar */
     margin-left: 100px;
-    /* Yazıları sola hizalar */
-    height: 600px;
-    /* Yüksekliği ayarlar */
+    height: auto;
+    padding-top: 50px;
+    max-width: 900px;
 }
 
 .home-baslik {
     padding: 3px 5px;
-    /* Başlık iç boşluğunu ayarlar */
+    display: inline-block;
 }
 
 .home-baslik2 {
     padding: 3px 5px;
-    /* Başlık iç boşluğunu ayarlar */
+    font-size: 4rem;
+    line-height: 1.2;
+    margin: 10px 0;
 }
 
 .home-sentence {
     font-size: 20px;
     color: rgb(255, 255, 255);
-    width: 900px;
-    /* Yazı genişliğini ayarlar */
-    height: 140px;
-    /* Yazı yüksekliğini ayarlar */
+    width: 100%;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.home-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .home-button {
     padding: 10px 20px;
-    /* Butonun iç boşluğunu ayarlar */
+    background-color: #1e3a8a;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background-color: #1e40af;
+    transform: translateY(-2px);
 }
 
 .home-button2 {
     padding: 10px 20px;
-    /* Butonun iç boşluğunu ayarlar */
-    margin-left: 40px;
-    /* Butonu sola hizalar */
     border: 1px solid rgb(255, 255, 255);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.home-button2:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
 }
 
 .box {
     display: flex;
-    /* Flexbox kullanır. flexbox amacı elemanları hizalamak ve aralarındaki boşlukları ayarlamaktır */
     justify-content: center;
-    /* Elemanları yatayda hizalar */
     align-items: center;
-    /* Elemanları dikeyde hizalar */
     gap: 20px;
-    /* Elemanlar arasındaki boşluğu ayarlar */
     padding: 5px;
-    /* Box'ın iç boşluğunu ayarlar */
     color: rgb(255, 255, 255);
     font-size: 50px;
     font-weight: bold;
     position: absolute;
-    /* Pozisyonu ayarlar. absolute ile stars div'inin içinde konumlandırır */
-    top: 650px;
-    /* Üst boşluğu ayarlar */
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    flex-wrap: wrap;
 }
 
 .boxs {
     padding: 20px;
-    /* Box'ın iç boşluğunu ayarlar */
     text-align: center;
-    /* Yazıları ortalar */
     font-size: 20px;
     font-weight: bold;
     background-color: white;
@@ -124,6 +111,78 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 175px;
     height: 100px;
+    transition: transform 0.3s ease;
+}
+
+.boxs:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive styles for home section */
+@media (max-width: 1024px) {
+    .home {
+        margin-left: 50px;
+        padding-top: 30px;
+    }
+
+    .home-baslik2 {
+        font-size: 3rem;
+    }
+
+    .home-sentence {
+        font-size: 18px;
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home {
+        margin-left: 30px;
+        margin-right: 30px;
+        padding-top: 20px;
+    }
+
+    .home-baslik2 {
+        font-size: 2.5rem;
+    }
+
+    .home-sentence {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .box {
+        gap: 10px;
+    }
+
+    .boxs {
+        width: 150px;
+        height: 90px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .home-baslik2 {
+        font-size: 2rem;
+    }
+
+    .box {
+        bottom: -120px;
+    }
+
+    .boxs {
+        width: 130px;
+        height: 80px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
 }
 
 /* Classes section styles - Küçültülmüş */
