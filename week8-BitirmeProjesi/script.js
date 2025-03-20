@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Add hover event listeners to trainer cards
+    // Trainer kısmında isimleri göster/gizle
     const trainerCards = document.querySelectorAll('.trainer-card');
 
     trainerCards.forEach(card => {
-        // Show name on mouse enter (hover)
+        // İsimleri göster
         card.addEventListener('mouseenter', function () {
             const trainerName = this.querySelector('.trainer-name');
             if (trainerName) {
@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        // Hide name on mouse leave
+        // Mouse çekildiğinde isimleri gizle
         card.addEventListener('mouseleave', function () {
             const trainerName = this.querySelector('.trainer-name');
             if (trainerName) {
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-    // Get elements
+    // Burada BMI hesaplama işlemleri yapılacak
     const heightInput = document.getElementById('height-input');
     const weightInput = document.getElementById('weight-input');
     const calculateBtn = document.getElementById('calculate-bmi');
@@ -47,24 +47,16 @@ document.addEventListener('DOMContentLoaded', function () {
     const bmiCategory = document.getElementById('bmi-category');
     const resultContainer = document.getElementById('result-container');
 
-    // Add event listener to the calculate button
+    // BMI hesaplama butonuna tıklanınca hesapla
     calculateBtn.addEventListener('click', calculateBMI);
 
-    // Also calculate when pressing Enter in input fields
-    heightInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') calculateBMI();
-    });
-
-    weightInput.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') calculateBMI();
-    });
-
+    // BMI hesaplama fonksiyonu
     function calculateBMI() {
         // Get values from inputs
         const height = parseFloat(heightInput.value);
         const weight = parseFloat(weightInput.value);
 
-        // Validate inputs
+        // Burada hata kontrolü yapılacak
         if (isNaN(height) || isNaN(weight) || height <= 0 || weight <= 0) {
             bmiResult.textContent = "Please enter valid height and weight";
             bmiCategory.textContent = "";
@@ -72,15 +64,15 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
 
-        // Calculate BMI - convert height from cm to m
+        // Bmi hesaplama
         const heightInMeters = height / 100;
         const bmi = weight / (heightInMeters * heightInMeters);
         const roundedBMI = bmi.toFixed(1);
 
-        // Display result
+        // Burada sonucu ekrana yazdır
         bmiResult.textContent = `Your BMI: ${roundedBMI}`;
 
-        // Determine BMI category
+        // BMI kategorisini belirle
         let category;
         let colorClass;
 
@@ -98,10 +90,10 @@ document.addEventListener('DOMContentLoaded', function () {
             colorClass = "bg-red-100 text-red-700";
         }
 
-        bmiCategory.textContent = category;
-        resultContainer.className = `p-4 mt-4 ${colorClass} rounded-lg`;
+        bmiCategory.textContent = category; // BMI kategorisini yazdır
+        resultContainer.className = `p-4 mt-4 ${colorClass} rounded-lg`; // Renk sınıfını ekle
 
-        // Show result container
+        // Sonucu göster
         resultContainer.style.display = "block";
     }
 });

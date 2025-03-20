@@ -1,6 +1,6 @@
 html {
     scroll-behavior: smooth;
-    /* Enable smooth scrolling */
+    /* Sayfa kaydırma efektini ekler */
 }
 
 body {
@@ -11,12 +11,15 @@ body {
     /* Sayfanın kenar boşluklarını sıfırlar */
 }
 
+
+/* Navbar Başlangıç */
 .stars {
     background-image: url('./pht/hero-man.jpg');
     height: 92vh;
     background-size: cover;
     background-position: center;
     position: relative;
+    /* Göreceli konumlandırma ekler */
     background-repeat: no-repeat;
     margin-bottom: 95px;
     display: flex;
@@ -29,11 +32,15 @@ body {
     padding: 3px;
 }
 
+/* Navbar Bitiş */
+
+/* Home Başlangıç */
 .home {
     align-items: flex-start;
     justify-content: center;
     margin-left: 100px;
     height: auto;
+    /* Yüksekliği otomatik ayarlar */
     margin-bottom: 10px;
     max-width: 900px;
 }
@@ -41,12 +48,15 @@ body {
 .home-baslik {
     padding: 3px 5px;
     display: inline-block;
+    /* İçeriği sarmalar */
 }
 
 .home-baslik2 {
     padding: 3px 5px;
     font-size: 4rem;
+    /* Başlık boyutunu ayarlar. Rem: Kök elementin boyutuna göre ayarlanır */
     line-height: 1.2;
+    /* Satır yüksekliğini ayarlar */
     margin: 10px 0;
 }
 
@@ -60,8 +70,11 @@ body {
 
 .home-buttons {
     display: flex;
+    /* Yatay hizalama ekler */
     flex-wrap: wrap;
+    /* Sığmazsa alt satıra geçer */
     gap: 20px;
+    /* Boşluk ekler */
     margin-top: 20px;
 }
 
@@ -70,12 +83,16 @@ body {
     background-color: #1e3a8a;
     color: white;
     border-radius: 4px;
+    /* Köşe yuvarlaklığı ekler */
     transition: all 0.3s ease;
+    /* Geçiş efekti ekler */
 }
 
 .home-button:hover {
+    /* Üzerine gelindiğinde */
     background-color: #1e40af;
     transform: translateY(-2px);
+    /* Y ekseninde hareket ekler */
 }
 
 .home-button2 {
@@ -90,6 +107,7 @@ body {
     transform: translateY(-2px);
 }
 
+/* 4 kutu Başlangıç */
 .box {
     display: flex;
     justify-content: center;
@@ -100,10 +118,10 @@ body {
     font-size: 50px;
     font-weight: bold;
     position: absolute;
+    /* Absolute'ın amacı kutuları alt kısıma sabitlemektir */
     bottom: -130px;
     left: 0;
     right: 0;
-    flex-wrap: nowrap;
 }
 
 .boxs {
@@ -122,10 +140,13 @@ body {
 .boxs:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Gölgeyi artırır */
 }
 
-/* Responsive styles for home section */
+/* Responsiv düzenlemeler */
 @media (max-width: 1024px) {
+
+    /* 1024 piksel ve altındaysa */
     .home {
         margin-left: 50px;
         padding-top: 30px;
@@ -190,58 +211,65 @@ body {
     }
 }
 
-/* Classes section styles - Küçültülmüş */
+/* Home Bitiş */
+
+/* Classes Başlangıç*/
 .classes {
     background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
     padding: 30px 15px;
-    /* Padding'i azalttım */
+    /* İç boşluk ekler */
     min-height: 60vh;
-    /* Minimum yüksekliği azalttım */
+    /* Minimum yükseklik ekler. vh: Ekran yüksekliğinin yüzde birimi */
     display: flex;
+    /* Yatay hizalama ekler */
     align-items: center;
+    /* Dikey hizalama ekler */
     justify-content: center;
+    /* İçeriği merkezler */
 }
 
 .classes-container {
     max-width: 1000px;
-    /* Genişliği azalttım */
+    /* Maksimum genişlik ekler */
     margin: 0 auto;
+    /* Merkezler */
     width: 100%;
+    /* Genişliği ayarlar */
 }
 
 .classes-baslik {
     text-align: center;
     color: #1e3a8a;
     font-size: 1.5rem;
-    /* Başlık boyutunu küçülttüm */
     font-weight: bold;
     margin-bottom: 15px;
-    /* Alt boşluğu azalttım */
     position: relative;
+    /* Göreceli konumlandırma ekler */
 }
 
 .classes-baslik::after {
     content: "";
+    /* İçerik ekler */
     display: block;
+    /* Blok element yapar */
     width: 60px;
-    /* Genişliği azalttım */
+    /* Genişliği ayarlar */
     height: 3px;
-    /* Yüksekliği azalttım */
+    /* Yüksekliği ayarlar */
     background-color: #f1b00c;
     margin: 10px auto 0;
-    /* Üst boşluğu azalttım */
+    /* Üst boşluğu ayarlar */
     border-radius: 300px;
+    /* Yuvarlak köşeler ekler */
 }
 
 .classes-sentence {
     text-align: center;
     max-width: 500px;
-    /* Genişliği azalttım */
+    /* Maksimum genişlik ekler */
     margin: 0 auto 25px;
-    /* Alt boşluğu azalttım */
     color: #4b5563;
     font-size: 0.9rem;
-    /* Yazı boyutunu küçülttüm */
 }
 
 /* Tab buttons */
@@ -249,108 +277,101 @@ body {
     display: flex;
     justify-content: center;
     gap: 8px;
-    /* Boşluğu azalttım */
+    /* Boşluk ekler */
     flex-wrap: wrap;
     margin-bottom: 25px;
-    /* Alt boşluğu azalttım */
+    /* Alt boşluğu ayarlar */
 }
 
 .classes-button {
     padding: 8px 16px;
-    /* Buton boyutunu küçülttüm */
     background-color: #1e3a8a;
     color: white;
     border: none;
     border-radius: 4px;
-    /* Köşe yuvarlaklığını azalttım */
     font-weight: 600;
     font-size: 0.9rem;
-    /* Yazı boyutunu küçülttüm */
     cursor: pointer;
+    /* İmleci el işareti yapar */
     transition: all 0.3s ease;
 }
 
 .classes-button:hover,
+/* Üzerine gelindiğinde */
 .classes-button.active {
+    /* Aktif buton */
+    /* Aktif buton */
     background-color: #f1b00c;
     transform: translateY(-1px);
-    /* Hover efektini azalttım */
+    /* Y ekseninde hareket ekler */
 }
 
-/* Tab content */
 .classes-four {
     background: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    /* İç boşluğu azalttım */
+    /* İç boşluk ekler */
     border-radius: 8px;
-    /* Köşe yuvarlaklığını azalttım */
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    /* Gölgeyi azalttım */
+    /* Gölge ekler */
     margin: 0 auto;
+    /* Merkezler */
     max-width: 700px;
-    /* Genişliği azalttım */
     position: relative;
+    /* Göreceli konumlandırma ekler */
 }
 
 .classes-four h3 {
+    /* Başlık */
     color: #1e3a8a;
     margin-bottom: 15px;
-    /* Alt boşluğu azalttım */
     font-size: 1.5rem;
-    /* Başlık boyutunu küçülttüm */
 }
 
 .classes-four p {
+    /* Paragraf */
     color: #4b5563;
     line-height: 1.5;
-    /* Satır yüksekliğini azalttım */
+    /* Satır yüksekliği */
     margin-bottom: 15px;
-    /* Alt boşluğu azalttım */
+    /* Alt boşluk */
     font-size: 0.9rem;
-    /* Yazı boyutunu küçülttüm */
 }
 
 .classes-pic {
+    /* Resim */
     width: 100%;
     max-width: 300px;
-    /* Resim boyutunu küçülttüm */
+    /* Maksimum genişlik ekler */
     height: auto;
     border-radius: 8px;
-    /* Köşe yuvarlaklığını azalttım */
     margin: 15px auto 0;
-    /* Üst boşluğu azalttım */
+    /* Üst boşluğu ayarlar */
     display: block;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
-    /* Gölgeyi azalttım */
+    /* Gölge ekler */
 }
 
-/* Responsive styles */
+/* Responsive düzenlemeler */
 @media (max-width: 768px) {
     .classes {
         padding: 25px 10px;
-        /* Padding'i daha da azalttım */
     }
 
     .classes-baslik {
         font-size: 1.3rem;
-        /* Başlık boyutunu daha da küçülttüm */
     }
 
     .classes-button {
         padding: 6px 12px;
-        /* Buton boyutunu daha da küçülttüm */
         font-size: 0.8rem;
-        /* Yazı boyutunu daha da küçülttüm */
     }
 
     .classes-four {
         padding: 15px;
-        /* İç boşluğu daha da azalttım */
     }
 
     .classes-four h3 {
         font-size: 1.3rem;
-        /* Başlık boyutunu daha da küçülttüm */
     }
 }
 
@@ -358,9 +379,8 @@ body {
     .classes-four {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
-        /* Sütun oranını azalttım */
+        /* Burada yapılan fr işlemi ile 1.2fr ve 1fr olmak üzere iki kolon oluşturuldu. Bunun amacı ise 1.2fr olan kolonun 1fr olan kolondan daha geniş olmasını sağlamak. */
         gap: 20px;
-        /* Boşluğu azalttım */
         align-items: center;
     }
 
@@ -368,65 +388,71 @@ body {
         margin: 0;
         grid-column: 2;
         grid-row: 1 / span 4;
+        /* Buradaki amaç ise resmin 1. satırdan başlayıp 4 satır boyunca devam etmesini sağlamak. */
         max-width: 250px;
         /* Resim boyutunu daha da küçülttüm */
     }
 }
 
-/* classes bitiş */
+/* Classes Bitiş */
 
-/* classesalt başlangıç - Küçültülmüş stiller */
+/* Classesalt Başlangıç */
 .classesalt {
     background-color: white;
     padding: 20px 20px 30px;
-    /* Padding'i azalttım */
+    /* 20 20 30 yapılmasının amacı üst ve alt boşlukları daha fazla yapmaktır */
     margin-bottom: 20px;
-    /* Alt boşluğu azalttım */
     min-height: 30vh;
-    /* Minimum yüksekliği azalttım */
 }
 
 .classesalt-baslik {
     font-size: 1.5rem;
-    /* Başlık boyutunu küçülttüm */
     color: #1e3a8a;
     margin-bottom: 10px;
-    /* Alt boşluğu azalttım */
+}
+
+.classesalt-baslik::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background-color: #f1b00c;
+    margin: 8px auto 0;
+    border-radius: 300px;
 }
 
 .classesalt-sentence {
     margin-bottom: 15px;
-    /* Alt boşluğu azalttım */
     color: #4b5563;
     line-height: 1.4;
-    /* Satır yüksekliğini azalttım */
+    /* Satır yüksekliği */
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     font-size: 0.9rem;
-    /* Yazı boyutunu küçülttüm */
 }
 
 .classesalt-form {
     display: flex;
+    /* Yatay hizalama */
     flex-direction: column;
+    /* Dikey hizalama. Column yerine row yazılsaydı yatay hizalama olacaktı */
     align-items: center;
     max-width: 400px;
-    /* Genişliği azalttım */
     margin: 0 auto;
+    /* Merkezleme */
 }
 
 .types {
     width: 100%;
     max-width: 180px;
-    /* Genişliği azalttım */
+    /* Maksimum genişlik */
     height: 35px;
-    /* Yüksekliği azalttım */
     border: 1px solid #ccc;
     font-weight: 100;
+    /* Yazı kalınlığı */
     font-family: 'Times New Roman', Times, serif;
     margin-bottom: 10px;
-    /* Alt boşluğu azalttım */
     text-align: center;
     border-radius: 4px;
 }
@@ -434,67 +460,61 @@ body {
 .classesalt-img {
     width: 100%;
     max-width: 280px;
-    /* Resim boyutunu küçülttüm */
     height: auto;
     margin-top: 15px;
-    /* Üst boşluğu azalttım */
     display: block;
+    /* Blok element yapar. Bu sayede genişlik ve yükseklik ayarları yapılabilir */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     margin-left: auto;
     margin-right: auto;
 }
 
-/* Result container styling */
+/* Result */
 #result-container {
+    /* Sonuçların yazıldığı kısım */
     width: 100%;
     max-width: 280px;
-    /* Genişliği azalttım */
     margin: 15px auto;
-    /* Boşlukları azalttım */
     padding: 10px;
-    /* İç boşluğu azalttım */
     border-radius: 8px;
     transition: all 0.3s ease;
 }
 
 #bmi-result {
+    /* Sonucun yazıldığı kısım */
     margin-bottom: 5px;
-    /* Alt boşluğu azalttım */
     font-size: 1rem;
-    /* Yazı boyutunu küçülttüm */
 }
 
 #bmi-category {
+    /* Çıkan sonucun kategorisini belirten kısım */
     font-size: 0.9rem;
-    /* Yazı boyutunu küçülttüm */
+    /* Yazı boyutunu */
 }
 
 /* Calculate butonu için stil */
 #calculate-bmi {
     padding: 8px 16px;
-    /* Buton boyutunu küçülttüm */
     font-size: 0.9rem;
-    /* Yazı boyutunu küçülttüm */
-    max-width: 180px;
-    /* Genişliği azalttım */
 }
 
-/* Trainer section styles - Küçültülmüş */
+/* Classesalt Bitiş */
+
+/* Trainer Başlangıç */
 .trainer {
     padding: 25px 15px;
-    /* Padding'i azalttım */
+    /* İç boşluk ekledim */
     min-height: 40vh;
-    /* Minimum yüksekliği azalttım */
+    /* Minimum yükseklik ekledim */
     background: linear-gradient(to right, rgb(156, 195, 221) 30%, rgb(248, 243, 243) 70%);
 }
 
 .trainer-container {
     max-width: 900px;
-    /* Genişliği azalttım */
     margin: 0 auto;
+    /* Merkezleme */
     padding: 10px;
-    /* İç boşluğu azalttım */
 }
 
 .trainer-baslik {
@@ -505,187 +525,197 @@ body {
     margin-bottom: 15px;
     /* Alt boşluğu azalttım */
     position: relative;
+    /* position relative amacı ile ::after seçicisini kullanarak alt çizgi ekleyebilirim */
 }
 
 .trainer-baslik::after {
     content: "";
     display: block;
     width: 50px;
-    /* Genişliği azalttım */
     height: 3px;
     background-color: #f1b00c;
     margin: 8px auto 0;
-    /* Üst boşluğu azalttım */
     border-radius: 300px;
 }
 
 .trainer-sentence {
     text-align: center;
     max-width: 600px;
-    /* Genişliği azalttım */
     margin: 0 auto 20px;
-    /* Alt boşluğu azalttım */
     color: #4b5563;
     line-height: 1.3;
-    /* Satır yüksekliğini azalttım */
     font-size: 0.85rem;
-    /* Yazı boyutunu küçülttüm */
 }
 
 .trainer-cards {
     display: grid;
+    /* Grid yapısını ekledim. Grid'in amacı sütun ve satır yapısını oluşturmak */
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    /* Sütun genişliğini azalttım */
+    /* repeat ile sütun sayısını belirledim. auto-fit ile sütunların genişliğini ayarladım. minmax ile sütunların minimum ve maksimum genişliğini belirledim */
     gap: 15px;
-    /* Boşluğu azalttım */
     padding: 5px 0;
-    /* İç boşluğu azalttım */
 }
 
 .trainer-card {
     position: relative;
     border-radius: 8px;
-    /* Köşe yuvarlaklığını azalttım */
     overflow: hidden;
+    /* Resimlerin dışarı taşmasını engeller */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Gölgeyi azalttım */
     cursor: pointer;
     transition: transform 0.3s ease;
+    /* Geçiş efekti ekler */
     height: 200px;
-    /* Yüksekliği sabitledim */
 }
 
 .trainer-card:hover {
     transform: translateY(-2px);
-    /* Hover efektini azalttım */
+    /* Hover efektini ekler */
 }
 
 .trainer-img {
     width: 100%;
     height: 100%;
-    /* Yüksekliği ayarladım */
     object-fit: cover;
+    /* Resmi sığdırır */
 }
 
 .trainer-name {
     position: absolute;
+    /* Mutlaka bir üst elemanın position değeri olmalı */
     width: 100%;
-    /* Genişliği düzelttim */
     height: 100%;
-    /* Yüksekliği düzelttim */
     margin-top: 0;
-    /* Üst boşluğu kaldırdım */
     top: 0;
+    /* Üstten hizalama */
     left: 0;
+    /* Soldan hizalama */
     right: 0;
+    /* Sağdan hizalama */
     bottom: 0;
+    /* Alttan hizalama */
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
     display: flex;
     flex-direction: column;
+    /* Column amacı ile alt alta hizalama */
     justify-content: flex-end;
+    /* flex-end ile alttan hizalama */
     padding: 12px;
-    /* İç boşluğu azalttım */
     opacity: 0;
+    /* Opaklık */
     transition: opacity 0.3s ease;
+    /* Geçiş efekti */
 }
 
 .trainer-card:hover .trainer-name {
     opacity: 1;
+    /* Opacity'nin amacı resmin üzerine gelindiğinde yazıların görünmesini sağlamak */
 }
 
 .trainer-name h3 {
+    /* Başlık */
     color: white;
     font-size: 1.1rem;
-    /* Yazı boyutunu küçülttüm */
     margin-bottom: 3px;
-    /* Alt boşluğu azalttım */
 }
 
 .trainer-name span {
+    /* Kategori */
     color: #f1b00c;
     font-size: 0.8rem;
-    /* Yazı boyutunu küçülttüm */
 }
 
-/* Responsive styles */
+/* Responsive */
 @media (max-width: 768px) {
+
+    /* 768 piksel ve altındaysa */
     .trainer {
         padding: 20px 10px;
-        /* Padding'i daha da azalttım */
+        /* 20 10 vererek iç boşluk */
     }
 
     .trainer-baslik {
         font-size: 1.3rem;
-        /* Başlık boyutunu daha da küçülttüm */
+        /* Burada yazı boyutunu küçülttüm */
     }
 
     .trainer-sentence {
         font-size: 0.8rem;
-        /* Yazı boyutunu daha da küçülttüm */
         padding: 0 10px;
     }
 
     .trainer-cards {
+        /* Kartlar */
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        /* Sütun genişliğini daha da azalttım */
+        /* Sütun genişliğini ayarladım */
         gap: 10px;
-        /* Boşluğu daha da azalttım */
     }
 
     .trainer-card {
         height: 180px;
-        /* Yüksekliği daha da azalttım */
     }
 }
 
-/* Buy section styles */
-/* Buy section styles - Küçültülmüş stiller */
+/* Trainer Bitiş */
+
+/* Product Başlangıç */
 .buy {
     padding: 25px 15px;
-    /* Padding'i azalttım */
     background-color: white;
     text-align: center;
     margin-bottom: 15px;
-    /* Alt boşluğu azalttım */
 }
 
 .buy h1 {
     color: #1e3a8a;
     font-size: 1.5rem;
-    /* Başlık boyutunu küçülttüm */
     margin-bottom: 10px;
-    /* Alt boşluğu azalttım */
+}
+
+.buy h1::after {
+    content: "";
+    /* İçerik ekler */
+    display: block;
+    /* Blok element yapar */
+    width: 60px;
+    /* Genişliği ayarlar */
+    height: 3px;
+    /* Yüksekliği ayarlar */
+    background-color: #f1b00c;
+    margin: 10px auto 0;
+    /* Üst boşluğu ayarlar */
+    border-radius: 300px;
+    /* Yuvarlak köşeler ekler */
 }
 
 .buy p {
     color: #4b5563;
     font-size: 0.8rem;
-    /* Yazı boyutunu küçülttüm */
     margin-bottom: 15px;
-    /* Alt boşluğu azalttım */
     max-width: 600px;
     margin-left: auto;
+    /* Sağdan hizalama */
     margin-right: auto;
+    /* Soldan hizalama */
 }
 
 .product-grid {
+    /* Ürünler */
     display: grid;
+    /* Grid'in amacı sütun ve satır yapısını oluşturmak */
     grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-    /* Sütun genişliğini azalttım */
+    /* repeat ile sütun sayısını belirledim. auto-fit ile sütunların genişliğini ayarladım. minmax ile sütunların minimum ve maksimum genişliğini belirledim */
     gap: 15px;
-    /* Boşlukları azalttım */
     max-width: 900px;
     margin: 0 auto;
 }
 
 .product-card {
+    /* Ürün kartları */
     background-color: white;
     border-radius: 8px;
-    /* Köşe yuvarlaklığını azalttım */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Gölgeyi azalttım */
     padding: 10px;
-    /* İç boşluğu azalttım */
     transition: transform 0.3s ease;
 }
 
@@ -695,38 +725,38 @@ body {
 }
 
 .product-card img {
+    /* Ürün resmi */
     width: 100%;
     height: auto;
     border-radius: 6px;
-    /* Köşe yuvarlaklığını azalttım */
     margin-bottom: 8px;
-    /* Alt boşluğu azalttım */
 }
 
 .product-card p {
+    /* Ürün açıklaması */
     color: #333;
     font-size: 0.8rem;
-    /* Yazı boyutunu küçülttüm */
     margin: 3px 0;
-    /* Boşlukları azalttım */
 }
 
 .product-card a {
+    /* Ürün linki */
     color: #1e3a8a;
     font-weight: bold;
     text-decoration: none;
     display: inline-block;
+    /* inline-block'un amacı linkin blok gibi davranmasını sağlamak */
     margin-top: 5px;
-    /* Üst boşluğu azalttım */
     font-size: 0.75rem;
-    /* Yazı boyutunu küçülttüm */
+    /* 0.75rem yazı boyutunu küçülttüm */
 }
 
 .product-card a:hover {
+    /* Üzerine gelindiğinde */
     color: #f1b00c;
 }
 
-/* Responsive styles */
+/* Responsive */
 @media (max-width: 768px) {
     .trainer {
         padding: 30px 15px;
@@ -766,7 +796,7 @@ body {
 
 /* Trainer bitiş */
 
-/* Review section styles - Küçültülmüş ve düzenlenmiş */
+/* Review Başlangıç */
 .review-g {
     height: auto;
     /* Sabit yükseklik yerine içeriğe göre ayarlanacak */
@@ -787,101 +817,82 @@ body {
 .review-baslik {
     text-align: center;
     margin-bottom: 15px;
-    /* Alt boşluğu azalttım */
     color: rgb(49, 49, 122);
     font-size: 1.5rem;
-    /* Başlık boyutunu küçülttüm */
 }
 
 .review-baslik::after {
     content: "";
     display: block;
     width: 60px;
-    /* Genişliği piksel olarak belirttim */
     height: 3px;
-    /* Yüksekliği azalttım */
     background-color: #f1b00c;
     margin: 8px auto 0;
     border-radius: 300px;
-    /* Yuvarlak köşeler ekler */
 }
 
 .review-p {
+    /* Yorumlar */
     text-align: center;
     width: 90%;
-    /* Genişliği yüzde olarak belirttim */
     max-width: 600px;
-    /* Maksimum genişlik ekledim */
     margin: 0 auto 20px;
-    /* Alt boşluğu azalttım */
     font-weight: 500;
     font-size: 0.9rem;
-    /* Yazı boyutunu küçülttüm */
 }
 
 .reviews {
     /* Yorumlar */
     display: flex;
+    /* Flex'in amacı yatay hizalama */
     flex-direction: row;
     /* Mobil görünümde alt alta gelecek */
     flex-wrap: wrap;
     /* Sığmazsa alt satıra geçecek */
     justify-content: center;
     gap: 20px;
-    /* Boşluğu azalttım */
     margin-top: 20px;
-    /* Üst boşluğu azalttım */
 }
 
 .review {
     /* Yorum */
     display: flex;
+    /* Yatay hizalama */
     align-items: flex-start;
-    /* Üstten hizalama */
+    /* Flex-start'ın amacı üstten hizalama */
     padding: 15px;
-    /* İç boşluğu azalttım */
     border-radius: 8px;
-    /* Köşe yuvarlaklığını azalttım */
     width: 100%;
-    /* Mobil için tam genişlik */
     max-width: 350px;
-    /* Maksimum genişlik */
     position: relative;
+    /* Göreceli konumlandırma */
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .review img {
     width: 50px;
-    /* Genişliği azalttım */
     height: 50px;
-    /* Yüksekliği azalttım */
     border-radius: 50%;
-    /* Tam yuvarlak */
     margin-right: 10px;
-    /* Sağ boşluğu azalttım */
     margin-bottom: 0;
-    /* Alt boşluğu kaldırdım */
 }
 
 .review-text {
     flex: 1;
-    /* Kalan alanı doldursun */
+    /* flex : 1 ile yorumun resimden sonra gelmesini sağladım */
 }
 
 .review-text h3 {
     /*isim*/
     margin: 0;
     font-size: 16px;
-    /* Yazı boyutunu küçülttüm */
     color: #090909;
 }
 
 .title {
     font-size: 12px;
-    /* Yazı boyutunu küçülttüm */
     color: #7f8c8d;
     margin-bottom: 8px;
-    /* Alt boşluğu azalttım */
 }
 
 .bubble {
@@ -889,16 +900,11 @@ body {
     background-color: #2670bf;
     color: white;
     padding: 12px;
-    /* İç boşluğu azalttım */
     border-radius: 15px;
-    /* Köşe yuvarlaklığını azalttım */
     position: relative;
     margin-top: 5px;
-    /* Üst boşluğu ayarladım */
     box-shadow: 0 4px 3px rgba(10, 10, 10, 0.1);
-    /* Gölgeyi azalttım */
     font-size: 0.85rem;
-    /* Yazı boyutunu küçülttüm */
 }
 
 /* Responsive düzenlemeler */
@@ -919,12 +925,12 @@ body {
 }
 
 
-/* Contact section styles - Düzenlenmiş */
+/* Contact Başlangıç */
 .contact {
     padding: 40px 20px;
     background-color: white;
     min-height: 60vh;
-    /* Yüksekliği azalttım */
+    /* Minimum yükseklik */
 }
 
 .contact-container {
@@ -932,6 +938,7 @@ body {
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
+    /* Sığmazsa alt satıra geçer */
     gap: 30px;
     justify-content: center;
 }
@@ -981,6 +988,7 @@ body {
 }
 
 .contact-info {
+    /* İletişim bilgileri */
     margin-bottom: 20px;
 }
 
@@ -1002,6 +1010,7 @@ body {
 textarea.forms {
     height: 120px;
     resize: vertical;
+    /* Resize özelliğinin amacı metin alanının boyutunu değiştirmektir. Vertical: Yalnızca yüksekliği değiştirir */
 }
 
 .contact-button {
@@ -1012,6 +1021,7 @@ textarea.forms {
     border-radius: 6px;
     font-size: 0.9rem;
     cursor: pointer;
+    /* İmleci el işareti yapar */
     transition: background-color 0.3s;
 }
 
@@ -1020,7 +1030,9 @@ textarea.forms {
 }
 
 .contact-map {
+    /* Harita */
     flex: 1;
+    /* flex:1'in amacı haritanın formdan daha geniş olmasını sağlamak */
     min-width: 300px;
     max-width: 500px;
 }
@@ -1032,7 +1044,7 @@ textarea.forms {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsive styles */
+/* Responsive */
 @media (max-width: 768px) {
     .contact {
         padding: 30px 15px;
@@ -1133,7 +1145,7 @@ textarea.forms {
     color: #f1c40f;
 }
 
-/* Responsive styles */
+/* Responsive */
 @media (max-width: 768px) {
     .footer {
         padding: 25px 10px;
