@@ -24,12 +24,17 @@ body {
     justify-content: center;
 }
 
+.joinus {
+    /* navbar join us butonu */
+    padding: 3px;
+}
+
 .home {
     align-items: flex-start;
     justify-content: center;
     margin-left: 100px;
     height: auto;
-    padding-top: 50px;
+    margin-bottom: 10px;
     max-width: 900px;
 }
 
@@ -95,10 +100,10 @@ body {
     font-size: 50px;
     font-weight: bold;
     position: absolute;
-    bottom: -50px;
+    bottom: -130px;
     left: 0;
     right: 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .boxs {
@@ -638,7 +643,7 @@ body {
 .buy {
     padding: 25px 15px;
     /* Padding'i azalttım */
-    background-color: #f8f8f8;
+    background-color: white;
     text-align: center;
     margin-bottom: 15px;
     /* Alt boşluğu azalttım */
