@@ -13,22 +13,90 @@ body {
 
 
 /* Navbar Başlangıç */
+.navbar {
+    z-index: 1000;
+    transition: all 0.3s ease;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+/* Mobile menu styles */
+.mobile-menu-button {
+    display: none;
+    /* None ile gizler */
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu.show {
+    display: block;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .mobile-menu-button {
+        display: block;
+        /* Block element yapar */
+    }
+
+    .navbar ul.hidden {
+        /* Burada navbarın gizli menüsünü ayarladım */
+        display: none;
+    }
+
+    .mobile-menu {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 50;
+    }
+
+    .mobile-menu ul {
+        width: 100%;
+    }
+
+    .mobile-menu li {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    /* Burada navbarın mobil hali için ayarlar yaptım */
+    .navbar {
+        background-color: #355592;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+}
+
+/* Burada navbarın arka plan rengini ve yüksekliğini ayarladım */
+.navbar-scrolled {
+    background-color: #355592;
+}
+
 .stars {
     background-image: url('./pht/hero-man.jpg');
     height: 92vh;
     background-size: cover;
     background-position: center;
     position: relative;
-    /* Göreceli konumlandırma ekler */
     background-repeat: no-repeat;
     margin-bottom: 95px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 60px;
 }
 
+/* Navbar Bitiş */
+
 .joinus {
-    /* navbar join us butonu */
     padding: 3px;
 }
 
@@ -45,13 +113,13 @@ body {
     max-width: 900px;
 }
 
-.home-baslik {
+.home-title {
     padding: 3px 5px;
     display: inline-block;
     /* İçeriği sarmalar */
 }
 
-.home-baslik2 {
+.home-title2 {
     padding: 3px 5px;
     font-size: 4rem;
     /* Başlık boyutunu ayarlar. Rem: Kök elementin boyutuna göre ayarlanır */
@@ -84,7 +152,7 @@ body {
     color: white;
     border-radius: 4px;
     /* Köşe yuvarlaklığı ekler */
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
     /* Geçiş efekti ekler */
 }
 
@@ -151,7 +219,7 @@ body {
         padding-top: 15px;
     }
 
-    .home-baslik2 {
+    .home-title2 {
         font-size: 2.2rem;
     }
 
@@ -162,12 +230,11 @@ body {
     .box {
         gap: 8px;
         bottom: -125px;
-        flex-wrap: wrap;
     }
 
     .boxs {
-        width: 140px;
-        height: 85px;
+        width: 90px;
+        height: 100px;
         font-size: 17px;
         padding: 15px;
     }
@@ -199,7 +266,7 @@ body {
     /* Genişliği ayarlar */
 }
 
-.classes-baslik {
+.classes-title {
     text-align: center;
     color: #1e3a8a;
     font-size: 1.5rem;
@@ -209,7 +276,7 @@ body {
     /* Göreceli konumlandırma ekler */
 }
 
-.classes-baslik::after {
+.classes-title::after {
     content: "";
     /* İçerik ekler */
     display: block;
@@ -261,8 +328,6 @@ body {
 .classes-button:hover,
 /* Üzerine gelindiğinde */
 .classes-button.active {
-    /* Aktif buton */
-    /* Aktif buton */
     background-color: #f1b00c;
     transform: translateY(-1px);
     /* Y ekseninde hareket ekler */
@@ -320,7 +385,7 @@ body {
         min-height: 50vh;
     }
 
-    .classes-baslik {
+    .classes-title {
         font-size: 1.2rem;
     }
 
@@ -364,13 +429,13 @@ body {
     min-height: 30vh;
 }
 
-.classesalt-baslik {
+.classesalt-title {
     font-size: 1.5rem;
     color: #1e3a8a;
     margin-bottom: 10px;
 }
 
-.classesalt-baslik::after {
+.classesalt-title::after {
     content: "";
     display: block;
     width: 50px;
@@ -464,7 +529,7 @@ body {
         padding: 15px 15px 25px;
     }
 
-    .classesalt-baslik {
+    .classesalt-title {
         font-size: 1.3rem;
     }
 
@@ -507,7 +572,7 @@ body {
     padding: 10px;
 }
 
-.trainer-baslik {
+.trainer-title {
     text-align: center;
     color: #1e3a8a;
     font-size: 1.5rem;
@@ -518,7 +583,7 @@ body {
     /* position relative amacı ile ::after seçicisini kullanarak alt çizgi ekleyebilirim */
 }
 
-.trainer-baslik::after {
+.trainer-title::after {
     content: "";
     display: block;
     width: 50px;
@@ -622,7 +687,7 @@ body {
         min-height: 35vh;
     }
 
-    .trainer-baslik {
+    .trainer-title {
         font-size: 1.2rem;
     }
 
@@ -633,12 +698,17 @@ body {
     }
 
     .trainer-cards {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 8px;
+        grid-template-columns: 1fr;
+        /* Sütun sayısını 1 yaptım */
+        gap: 15px;
     }
 
     .trainer-card {
-        height: 160px;
+        height: 280px;
+        max-width: 280px;
+        /* Maksimum genişlik */
+        margin: 0 auto;
+        /* Merkezleme */
     }
 
     .trainer-name h3 {
@@ -766,12 +836,15 @@ body {
     }
 
     .product-grid {
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-        gap: 12px;
+        grid-template-columns: 1fr;
+        /* Sütun sayısını 1 yaptım */
+        gap: 15px;
     }
 
     .product-card {
         padding: 8px;
+        max-width: 280px;
+        margin: 0 auto;
     }
 
     .product-card p {
@@ -783,7 +856,7 @@ body {
     }
 }
 
-/* Trainer bitiş */
+/* Product bitiş */
 
 /* Review Başlangıç */
 .review-g {
@@ -803,14 +876,14 @@ body {
     padding: 20px 0;
 }
 
-.review-baslik {
+.review-title {
     text-align: center;
     margin-bottom: 15px;
     color: rgb(49, 49, 122);
     font-size: 1.5rem;
 }
 
-.review-baslik::after {
+.review-title::after {
     content: "";
     display: block;
     width: 60px;
@@ -903,7 +976,7 @@ body {
         min-height: 35vh;
     }
 
-    .review-baslik {
+    .review-title {
         font-size: 1.2rem;
         margin-bottom: 10px;
     }
@@ -944,6 +1017,8 @@ body {
     }
 }
 
+/* Review Bitiş */
+
 
 /* Contact Başlangıç */
 .contact {
@@ -969,14 +1044,14 @@ body {
     margin-bottom: 30px;
 }
 
-.contact-baslik {
+.contact-title {
     font-size: 1.75rem;
     color: #255283;
     margin-bottom: 15px;
     font-weight: bold;
 }
 
-.contact-baslik::after {
+.contact-title::after {
     content: "";
     display: block;
     width: 60px;
@@ -1075,7 +1150,7 @@ textarea.forms {
         margin-bottom: 20px;
     }
 
-    .contact-baslik {
+    .contact-title {
         font-size: 1.3rem;
         margin-bottom: 10px;
     }
@@ -1117,6 +1192,8 @@ textarea.forms {
         height: 250px;
     }
 }
+
+/* Contact Bitiş */
 
 /* Footer styles - Düzenlenmiş */
 .footer {
@@ -1232,3 +1309,5 @@ textarea.forms {
         font-size: 11px;
     }
 }
+
+/* Footer Bitiş */

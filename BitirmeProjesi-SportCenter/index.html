@@ -6,16 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SportCenter</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Navbar Başlangıç -->
     <div class="stars">
-        <nav class="navbar p-0 text-white fixed w-full top-0 left-0 absolute">
+        <nav class="navbar p-0 text-white fixed w-full top-0 left-0">
             <div class="m-auto flex justify-center items-center">
                 <img src="./pht/logo.png" alt="">
+                <!-- Burada mobile-menu-button class'ını ekledim -->
+                <button class="mobile-menu-button md:hidden ml-auto mr-4">
+                    <!-- Burada icon'ı ekledim -->
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
+                <!-- Burada yaptığım şey desktop ve mobile menüyü birleştirmek oldu -->
                 <ul class="hidden md:flex space-x-6 ml-20">
                     <li><a href="#home" class="hover:text-gray-300 font-bold">Home</a></li>
                     <li><a href="#classes" class="hover:text-gray-300 font-bold">Classes</a></li>
@@ -28,6 +37,18 @@
                     </button>
                 </ul>
             </div>
+            <!-- Burada mobile-menu class'ını ekledim -->
+            <div class="mobile-menu hidden">
+                <ul class="bg-[#355592] py-4">
+                    <li><a href="#home" class="block px-4 py-2 text-white hover:bg-blue-700">Home</a></li>
+                    <li><a href="#classes" class="block px-4 py-2 text-white hover:bg-blue-700">Classes</a></li>
+                    <li><a href="#trainer" class="block px-4 py-2 text-white hover:bg-blue-700">Trainer</a></li>
+                    <li><a href="#review" class="block px-4 py-2 text-white hover:bg-blue-700">Review</a></li>
+                    <li><a href="#contact" class="block px-4 py-2 text-white hover:bg-blue-700">Contact</a></li>
+                    <li><a href="#joinus" class="block px-4 py-2 text-white hover:bg-blue-700">JOIN US</a></li>
+                </ul>
+            </div>
+        </nav>
         </nav>
         <!-- Navbar Bitiş -->
 
@@ -35,8 +56,8 @@
         <div class="pt-20">
             <section id="home" class="h-screen flex items-center justify-center">
                 <div class="home">
-                    <h2 class="home-baslik text-xl font-bold text-white rounded bg-blue-900">POWERFULL</h2>
-                    <h2 class="home-baslik2 font-bold text-white">Group <br>
+                    <h2 class="home-title text-xl font-bold text-white rounded bg-blue-900">POWERFULL</h2>
+                    <h2 class="home-title2 font-bold text-white">Group <br>
                         Practice <br>
                         With Trainer
                     </h2>
@@ -84,7 +105,7 @@
     <div class="pt-3">
         <section id="classes" class="classes">
             <div class="classes-container">
-                <h2 class="classes-baslik">OUR CLASSES</h2>
+                <h2 class="classes-title">OUR CLASSES</h2>
                 <p class="classes-sentence font-bold">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
                     veritatis aliquam tempore iste temporibus veniam amet!
@@ -170,7 +191,7 @@
     <div class="classesalt">
         <section id="bmi-calculator" class="flex flex-col items-center justify-center bg-white">
             <div class="classes-alt font-bold text-center w-full">
-                <h3 class="classesalt-baslik text-3xl text-blue-900 mb-4">BMI Calculator</h3>
+                <h3 class="classesalt-title text-3xl text-blue-900 mb-4">BMI Calculator</h3>
                 <div class="classesalt-sentence mx-auto mb-6">
                     <p>Body Mass Index (BMI) is a measure of body fat based on height and weight that applies to adult
                         men
@@ -212,7 +233,7 @@
     <div class="trainer">
         <section id="trainer" class="trainer">
             <div class="trainer-container">
-                <h2 class="trainer-baslik font-bold">OUR BEST TRAINERS</h2>
+                <h2 class="trainer-title font-bold">OUR BEST TRAINERS</h2>
                 <p class="trainer-sentence">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio iure nisi,
                     molestias reiciendis praesentium cumque placeat omnis natus sit blanditiis.
@@ -288,7 +309,7 @@
     <div class="review-g">
         <section id="review" class="flex flex-col items-center justify-center">
             <div class="review-a">
-                <h2 class="review-baslik font-bold text-2xl">REVIEW CLIENT</h2>
+                <h2 class="review-title font-bold text-2xl">REVIEW CLIENT</h2>
                 <p class="review-p">Lorem Ipsum is not simply random text. It has roots in a piece of classical at
                     Hampden-Sydney College.</p>
                 <div class="reviews">
@@ -325,7 +346,7 @@
         <section id="contact" class="contact">
             <div class="contact-container">
                 <div class="contact-ust">
-                    <h1 class="contact-baslik">CONTACT US</h1>
+                    <h1 class="contact-title">CONTACT US</h1>
                     <p class="contact-sentence">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo non
                         ratione
                         quibusdam quaerat aliquam commodi laudantium doloremque</p>
@@ -390,6 +411,7 @@
         </div>
     </footer>
     <!-- Footer Bitiş -->
+    <script src="script.js"></script>
 </body>
 
 </html>

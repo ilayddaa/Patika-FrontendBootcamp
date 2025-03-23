@@ -2,17 +2,37 @@ document.addEventListener("DOMContentLoaded", function () {
     const buttons = document.querySelectorAll(".classes-buttons button");
     const contents = document.querySelectorAll(".tab-content");
 
+    // Burada tablar arasında geçiş yapılacak
+    contents.forEach(content => content.classList.add("hidden"));
+
+    // Eğer tab içeriği varsa ilk tabı göster
+    if (contents.length > 0) {
+        contents[0].classList.remove("hidden");
+
+        // Eğer buton varsa ilk butonu aktif yap
+        if (buttons.length > 0) {
+            buttons[0].classList.add("active");
+        }
+    }
+
     buttons.forEach(button => {
         button.addEventListener("click", function () {
             const tab = this.getAttribute("data-tab");
 
-            // Önce tüm içerikleri gizle
+            // Butonlardan aktif olanı kaldır
+            buttons.forEach(btn => btn.classList.remove("active"));
+
+            // Tıklanan butonu aktif yap
+            this.classList.add("active");
+
+            // Burda tab içeriklerini gizle
             contents.forEach(content => content.classList.add("hidden"));
 
-            // Seçilen içeriği göster
+            // Tıklanan tabı göster
             document.getElementById(tab).classList.remove("hidden");
         });
     });
+
 
     // Trainer kısmında isimleri göster/gizle
     const trainerCards = document.querySelectorAll('.trainer-card');
@@ -96,4 +116,32 @@ document.addEventListener('DOMContentLoaded', function () {
         // Sonucu göster
         resultContainer.style.display = "block";
     }
+});
+
+// Burada mobile menu işlemleri yapılacak
+document.addEventListener('DOMContentLoaded', function () {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const mobileMenu = document.querySelector('.mobile-menu');
+
+    mobileMenuButton.addEventListener('click', function () {
+        mobileMenu.classList.toggle('show');
+    });
+
+    // Burada mobile menunun dışına tıklanınca menüyü kapat
+    document.addEventListener('click', function (event) {
+        const isClickInsideMenu = mobileMenu.contains(event.target);
+        const isClickOnButton = mobileMenuButton.contains(event.target);
+
+        if (!isClickInsideMenu && !isClickOnButton && mobileMenu.classList.contains('show')) {
+            mobileMenu.classList.remove('show');
+        }
+    });
+
+    // Burada mobile menüdeki linklere tıklanınca menüyü kapat
+    const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove('show');
+        });
+    });
 });
