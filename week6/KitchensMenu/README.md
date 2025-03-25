@@ -14,7 +14,7 @@ This project is a simple web application that displays a menu for a kitchen. It 
 
 ## Screenshot
 
-![Kitchens Menu Screenshot](./ss.png)
+![Kitchens Menu Screenshot](./ss2.png)
 
 
 ## Folder Structure
