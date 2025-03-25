@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: pink;
+        }
+
+        h1 {
+            text-align: center;
+            color: #ffffff;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .todo-container {
+            background-color: #dd9393;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .todo-header {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        #todo-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+            font-size: 16px;
+        }
+
+        #add-button {
+            padding: 10px 15px;
+            background-color: #9a3f7c;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        #add-button:hover {
+            background-color: #e37ae4;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px 15px;
+            background-color: white;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap;
+            /* Burası task-textin yanına buton sığdırmak için */
+        }
+
+        .task-text {
+            flex: 1;
+            /* Burası task-textin genişliğini ayarlar */
+            word-break: break-word;
+            /* Burası overflow-wrapten farkı kelimeyi kırar */
+            overflow-wrap: break-word;
+            /* Burası word-breakten farkı kelimeyi kırmadan sadece uzun kelimeyi kırar */
+            max-width: 100%;
+            margin-right: 10px;
+        }
+
+        .completed {
+            text-decoration: line-through;
+            color: #888;
+        }
+
+        .task-actions {
+            /* Burası butonları yan yana sıralamak için */
+            display: flex;
+            gap: 5px;
+        }
+
+        .complete-btn,
+        .delete-btn {
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            white-space: nowrap;
+            /* burada no-wrap olursa butonlar yan yana sıralanmaz */
+
+        }
+
+        .complete-btn {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        /* Responsive styles */
+        @media (max-width: 350px) {
+            li {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .task-text {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            .task-actions {
+                width: 100%;
+                justify-content: flex-end;
+            }
+        }
+
+        #todo-input {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="todo-container">
+        <h1>✨ To-Do List ✨</h1>
+        <div class="todo-header">
+            <input type="text" id="todo-input" placeholder="Sevgili ToDoList bugün yapılacaklar...">
+            <button id="add-button">Add</button>
+        </div>
+        <ul id="todo-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
